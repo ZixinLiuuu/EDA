@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DSAN6000 Group 14 - NLP</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DSAN 6000 Group 14</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html">
+ <span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./nlp.html" aria-current="page">
+ <span class="menu-text">NLP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html">
+ <span class="menu-text">ML</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./summary.html">
+ <span class="menu-text">Summary</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+<h2 id="toc-title">Contents</h2>
+
+<ul>
+<li><a href="#NLP-1" id="NLP 1" class="nav-link active" data-scroll-target="#data-information-and-introduction">NLP 1</a></li>
+<li><a href="#NLP-2" id="NLP 2" class="nav-link" data-scroll-target="#data-cleaning">NLP 2</a></li>
+<li><a href="#NLP-3" id="NLP 3" class="nav-link" data-scroll-target="#dataset-overview">NLP 3</a></li>
+<li><a href="#NLP-4" id="NLP 4" class="nav-link" data-scroll-target="#dataset-overview">NLP 4</a></li>
+<li><a href="#External-dataset" id="external-dataset" class="nav-link" data-scroll-target="#dataset-overview">External: Stock Data</a></li>
+</ul>
+</nav>
+</div>
+
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<section id="NLP" class="level1">
+    <h1>NLP</h1>
+    <p><a href="../website/project-nlp-1.html">Note:Link to the source code - 1</a></p>
+    <p><a href="../website/project-nlp-2.html">Note:Link to the source code - 2</a></p>
+    <p><a href="../website/project-nlp-3.html">Note:Link to the source code - 3</a></p>
+    <p><a href="../website/project-nlp-4.html">Note:Link to the source code - 4</a></p>
+    <p><a href="../website/external_source.html">Note:Link to the source code - external dataset</a></p>
+    
+    
+    <section id="NLP-1" class="level2">
+    <h2 class="anchored" data-anchor-id="NLp-1">NLP 1</h2>
+            <p>
+              Initially, we employ regular expressions to identify posts containing "iphone14" and its variants, related features, and abbreviations. Then, the data undergoes preprocessing, which includes removing irrelevant characters, standardizing text formats, eliminating punctuation and excess spaces, and merging the titles and content of the posts to form a coherent and clear text input. Subsequently, using Spark NLP and the T5 model, we conduct extensive analysis and question generation on this preprocessed text. The generated questions reflect community members’ key inquiries and primary concerns about iPhone 14.
+            </p>
+            <p>
+              The questions generated by the T5 model trained using large amounts of data represent the most concerning aspects of the iPhone for the majority of posting users. These generated questions will serve as automatic prompts, which can help users clarify their questioning ideas and increase their interest in asking questions, thereby improving user experience, further enhancing the activity of the Reddit community, and improving the overall interaction quality and satisfaction within the community.
+            </p>
+            <table class="dataframe table table-sm table-striped">
+              <thead>
+                <tr>
+                  <th>result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>What is the name of the phone I bought?</td>
+                </tr>
+                <tr>
+                  <td>What is the name of the iPhone 14 model?</td>
+                </tr>
+                <tr>
+                  <td>What is the new iPhone 14 Pro?</td>
+                </tr>
+                <tr>
+                  <td>What is the bug fix for iOS 1601?</td>
+                </tr>
+                <tr>
+                  <td>What is the battery life of the iPhone 14 Pro?</td>
+                </tr>
+                <tr>
+                  <td>What is the iPhone 14 Pro Max?</td>
+                </tr>
+                <tr>
+                  <td>What is the name of the reviewers who have watched several reviews?</td>
+                </tr>
+                <tr>
+                  <td>What is the noise cancellation on the iPhone 14 vs the 13?</td>
+                </tr>
+                <tr>
+                  <td>What is the Speck clear case?</td>
+                </tr>
+                <tr>
+                  <td>What is the best way to transfer contacts, pictures, etc. to the new phone?</td>
+                </tr>
+                <tr>
+                  <td>What was the name of the Mini Pro that I was curious about?</td>
+                </tr>
+                <tr>
+                  <td>What is the delivery date for my iPhone 14 Pro Max?</td>
+                </tr>
+                <tr>
+                  <td>What is the bug fixes for iOS 1601?</td>
+                </tr>
+                <tr>
+                  <td>What date was pushed back from next Tuesday to Friday?</td>
+                </tr>
+                <tr>
+                  <td>Where can I buy a new iPhone 13 Pro Max that is unlocked?</td>
+                </tr>
+                <tr>
+                  <td>What is the benefit of using iPhone 14 with eSIM while traveling?</td>
+                </tr>
+                <tr>
+                  <td>What color did all of the three iPhone models have?</td>
+                </tr>
+                <tr>
+                  <td>What is the current size of my phone?</td>
+                </tr>
+                <tr>
+                  <td>What is there to expect that I haven't with my old phone?</td>
+                </tr>
+                <tr>
+                  <td>Which leaks were the least accurate?</td>
+                </tr>
+                <tr>
+                  <td>What leaks were the least accurate?</td>
+                </tr>
+                <tr>
+                  <td>What is the overall color of the picture on the iPhone 14 Pro?</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              From this we can analyze the issues that users are concerned about mainly divided into the following parts: Features and performance of various iPhone 14 models; System updates and possible technical issues; User experience; Comparison with other models; Availability and supply chain issues; Market Feedback and Product Reviews Comments; Design and appearance. These aspects of attention reflect users’ focus on iPhone 14. These insights can be used to guide content creation, product development, go-to-market strategy, and provide more personalized user support. In this way, Reddit is not only able to provide post suggestions to enhance the user experience, but also provide valuable market insights.
+            </p>
+    </section>
+    <section id="NLP-2" class="level2">
+      <h2 class="anchored" data-anchor-id="NLP-2">NLP 2</h2>
+              
+              <p>
+                Drawing insights from the content of posts within the "iPhone" subreddit, our approach involved the implementation of a sophisticated topic model. This model served as a powerful tool to identify and encapsulate the prevailing themes that captivate the interest of the community within this specific domain. As we delved into the iPhone-related subreddit, our primary goal was to uncover the fundamental aspects that strike a chord with the community members. The utilization of a topic model not only allowed us to achieve this objective but also brought forth a wealth of noteworthy observations.
+              </p>
+              <img src="../data/plots/hot_level_of_each_topic_all.png" alt="Image 1">
+              
+              <p>
+                At the forefront, the discourse within the community predominantly revolves around key subjects such as "skills," "questioning_criticism," "employee," "benefits," and "learning." The prominence of "questioning_criticism" and "skills" as dominant topics is indicative of a profound enthusiasm within the community to acquire knowledge and actively participate in discussions concerning various Apple products. These focal points underscore the community's fervor for staying well-informed and engaging in dialogues centered around Apple's diverse product offerings.
+              </p>
+              <img src="../data/plots/hot_level_of_each_topic_combined.png" alt="Image 2">
+              
+              <p>
+                Moreover, discussions pertaining to "employee" and "benefits" suggest a heightened interest in matters related to Apple as an employer. These discussions may unveil a collective curiosity regarding the experiences of Apple employees and the intrigue generated by the company's diverse product portfolio. In essence, our analysis reveals a multifaceted landscape within the iPhone-related subreddit, where the community's passion extends beyond product-centric discussions to encompass broader themes of professional engagement and corporate interest.
+              </p>
+              <img src="../data/plots/hot_level_of_each_topic_word_cloud.png" alt="Image 3">
+      </section>
+      <section id="NLP-3" class="level2">
+        <h2 class="anchored" data-anchor-id="NLP-3">NLP 3</h2>
+              <p>
+                Based on the sentiment model, I detected the sentiment of all comments in the iPhone subreddit from 2022 to 2023. I found and excluded some errors, as well as some deleted comments. The probabilities of positive and negative sentiment appearing are evenly split. The assessments of Apple's products exhibit a balanced and reasoned approach, avoiding exclusively positive or negative sentiments.
+              </p>
+              <img src="../data/plots/sentiment_analysis_pie.png" alt="Image 1">
+      </section>
+      <section id="NLP-4" class="level2">
+        <h2 class="anchored" data-anchor-id="NLP-4">NLP 4</h2>
+              
+              <p>
+                Based on the results of NLP_3, we conducted the NLP_4 task with the primary aim of identifying instances of sarcasm and irony in user comments within the "iPhone" subreddit. NLP_3 primarily explored the sentiment analysis results of comments in the iPhone subreddit dataset from 2022-2023. According to our findings, positive sentiment accounts for 47.8%, negative sentiment for 49.1%, and the rest could not be analyzed.
+              </p>
+              <p>
+                In NLP_4, we employed three methods to comprehensively identify the proportion of comments classified as sarcasm. In the first method, since we tend to believe that sarcasm belongs to negative sentiment, we first filtered out the results of NLP_3 negative sentiment, and then called the Emotion Model to get different emotions. The model provides only four categories: joy, fear, surprise, and sadness. If solely relying on the first method, we inferred that within negative sentiment, emotions classified as joy or surprise are most likely sarcasm. However, recognizing the limitations and potential inaccuracies of this conclusion, we decided to utilize methods two and three to further enhance our analysis.
+              </p>
+              <table class="dataframe table table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>negative_emotion</th>
+                    <th>count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>0</th>
+                    <td>joy</td>
+                    <td>34429</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>fear</td>
+                    <td>43439</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>surprise</td>
+                    <td>50076</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>sadness</td>
+                    <td>175822</td>
+                  </tr>
+                </tbody>
+              </table>
+              <img src="../data/plots/negative_sentiment_analysis_pie.png" alt="Image 1">
+
+              <p>
+                Methods two and three involve utilizing a Sarcasm Classifier (another type of model), which provides only two outcomes: normal and sarcasm. Additionally, since we tend to believe that sarcasm falls under negative sentiment (though this is only our speculation), in method two, we filtered the results of NLP_3 positive sentiment comments. We then invoked the Sarcasm Model to obtain normal or sarcasm results. As for our method three, it involves, once again, filtering the results of NLP_3 negative sentiment. Subsequently, we invoked the Sarcasm Model to obtain normal or sarcasm results. The following are the results of method two and three:
+              </p>
+              <!-- Combined Table with Images -->
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>sarcasm_emotion</th>
+      <th>count</th>
+      <th>image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table 1: Method 2 -->
+    <tr>
+      <th rowspan="2">Method 2</th>
+      <td>normal</td>
+      <td>252723</td>
+      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_2.png" alt="Method 2 Image"></td>
+    </tr>
+    <tr>
+      <td>sarcasm</td>
+      <td>43183</td>
+    </tr>
+
+    <!-- Table 2: Method 3 -->
+    <tr>
+      <th rowspan="2">Method 3</th>
+      <td>normal</td>
+      <td>259313</td>
+      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_3.png" alt="Method 3 Image"></td>
+    </tr>
+    <tr>
+      <td>sarcasm</td>
+      <td>44453</td>
+    </tr>
+  </tbody>
+</table>
+
+              <p>
+                However, based on the results of methods two and three, which involve examining positive and negative comments and categorizing them as normal or sarcasm, we observed that sarcasm accounts for 14.6% in both subsets. We speculate that this could be due to several reasons, possibly stemming from the internal settings of the Sarcasm Model we used. However, as we only invoked pretrained models, we cannot confirm whether this is the case. Another possibility is that our two subsets happen to exhibit this distribution by chance.
+              </p>
+              <p>
+                Based on the final output results (CSV file) from the three methods described above, as the subset for method two comes from positive sentiment comments, while those for methods one and three come from negative sentiment comments, we focused on examining the first approximately seven hundred rows of the files for methods one and three. We observed the following conclusions:
+              </p>
+              <p>
+                Through comparing the actual comments (body) classified by the Emotion Model as joy (method one) and the Sarcasm Model as sarcasm (method three, both being negative sentiment subsets), the overlap between the two is not very high, but there is an overlap of approximately one to four comments per hundred. When comparing the actual comments (body) classified by the Emotion Model as fear (method one) and the Sarcasm Model as sarcasm (method three, both being negative sentiment subsets), the overlap between the two is very low, much lower than the overlap observed in the joy classification within negative sentiment. Similarly, when comparing the actual comments (body) classified by the Emotion Model as surprise (method one) and the Sarcasm Model as sarcasm (method three, both being negative sentiment subsets), the overlap between the two is not very high, lower than the overlap in joy classification but higher than the overlap in fear classification. Based on the above observations, the results are somewhat consistent with our initial speculation. Initially, we speculated that within negative sentiment comments, emotions classified as joy or surprise are most likely sarcasm. However, by comparing the actual comments (body) classified as sadness by the Emotion Model (method one) and as sarcasm by the Sarcasm Model (method three, both being negative sentiment subsets), the overlap between the two is very high. It is the highest overlap among the four emotions and the sarcasm classification. From the results of these four analyses, we conclude that within negative sentiment comments, emotions classified as sadness are most likely to be sarcasm. However, we also took into consideration that within the negative sentiment subset, sadness classification accounts for 57.9%, while sarcasm classification is only 14.6%. The high overlap is highly probable and evident. Therefore, in the end, we infer that within negative sentiment comments, emotions classified as joy or sadness are most likely to be sarcasm.
+              </p>
+              <p>
+                Finally, we also manually examined the file (body part) from method two. We observed that within the subset classified as positive sentiment, comments classified as sarcasm by the Sarcasm Model also had a significant probability of being classified as sarcasm by human judgment. This outcome leads us to infer that, initially, our tendency to believe that sarcasm belongs to negative sentiment was relatively arbitrary. This assumption was a consensus reached within our group for classifying human sarcasm emotions. In reality, how others determine whether sarcasm belongs to positive or negative sentiment is unknown to us. Based on the results obtained from the model, sarcasm comments could be present in both positive and negative sentiment. Considering that we invoked pretrained models and lack insight into the classification logic behind the models, we cannot conclusively assert that sarcasm is exclusively associated with negative sentiment. The above is our utilization of three methods and two models to further analyze possible outcomes of sarcasm comments within the iPhone subreddit comment dataset. Understanding these sarcastic comments can enhance the comprehension of nuanced communication on Reddit.
+              </p>
+             
+      </section>
+    </section>
+    <section id="external-dataset" class="level2">
+      <h2 class="anchored" data-anchor-id="external-dataset">External: Stock Data</h2>
+            <p>
+              Due to our subreddit dataset revolving around various analyses related to the keyword “iPhone” (EDA, NLP, and ML tasks), we developed curiosity about Apple Inc., prompting a desire for further analysis of the company. Therefore, in terms of external sources, we aim to explore whether the release of new iPhone products by Apple Inc. in recent years has had an impact on the company's stock price and whether the discussion intensity on Reddit significantly increases during these product launches. Naturally, we acknowledge that the unveiling of new products in September each year encompasses not only new iPhone models but also other items (such as Mac, iPad, Apple Watch, Apple Studio, etc.), all of which can influence Apple's stock price. Furthermore, it is essential to note that factors beyond new product releases can impact stock prices. However, considering the data at our disposal and the fact that iPhones contribute approximately 52% to Apple's Net Sales from 2021 to 2023 (source: Apple's 2023 Form 10-K), making them the most influential among all Apple products, we chose to focus on iPhones as representatives. 
+            </p>
+            <p>
+              Below, we will sequentially introduce how we fetched Apple stock prices, cleaned the data, and finally analyzed the connection between Apple stock prices and our iPhone subreddit dataset. 
+            </p>
+            <p>
+              We wrote code to call Yahoo Finance API and then scrape historical data of stock prices of Apple Inc. from Yahoo Finance. Yahoo Finance offers “Yahoo Finance API” which is a RESTful API that provides access to financial data. The data includes stock quotes, historical prices, and company information. We chose this API since the API is free to use and does not require an API key. In our code, we first sent a http request to Yahoo Finance. Initially, we failed to get data, since the API prefers to be used by websites rather than individual access. To solve this issue, we added a variable called “headers”. We used this “headers” variable in the “Get” request to pretend that we are a website (not individual). After sending the http request, if the http response status is “404”, the script will print information to the terminal to notify that this symbol does not exist in Yahoo Finance (the stock might be delisted). If the http response status is “200”, then we will know that this request is successful. We also implemented a "SLEEP_TIME" to ensure that our requests wouldn't overload the server. These implementations allowed us to successfully retrieve the information that we wanted.
+            </p>
+            <p>
+              In our external source (dataset), there are 7 attributes.
+            </p>
+            <!-- Stock Trading Information Table -->
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Date</td>
+      <td>trading day</td>
+      <td>The specific day on which trading activities occur.</td>
+    </tr>
+    <tr>
+      <td>Open</td>
+      <td>a stock’s initial price at the start of the trading day</td>
+      <td>The initial price at which a stock is traded at the beginning of the trading day.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>a stock’s highest trading price for the day</td>
+      <td>The highest price at which a stock is traded during the entire trading day.</td>
+    </tr>
+    <tr>
+      <td>Low</td>
+      <td>a stock’s lowest trading price for the day</td>
+      <td>The lowest price at which a stock is traded during the entire trading day.</td>
+    </tr>
+    <tr>
+      <td>Close</td>
+      <td>the last price at which a security traded during the regular trading day</td>
+      <td>The final price at which a security is traded when the regular trading day concludes.</td>
+    </tr>
+    <tr>
+      <td>Adj Close</td>
+      <td>the closing price after adjustments for all applicable splits and dividend distributions (reflects the impact of cash dividends, stock dividends, or stock splits)</td>
+      <td>The closing price of a security, adjusted for any splits or dividend distributions, providing a more accurate reflection of value.</td>
+    </tr>
+    <tr>
+      <td>Volume</td>
+      <td>the number of a stock’s shares that are traded on a stock exchange in a day</td>
+      <td>The total number of shares of a stock that are bought and sold on a stock exchange during a single trading day.</td>
+    </tr>
+  </tbody>
+</table>
+
+            <p>
+              After fetching the external data, we proceeded to clean it. While there are no missing values, we identified some anomalies in the data, specifically during the years 1981-1985. These anomalies included days with zero volume or days where the open, highest, lowest, and close prices remained the same throughout the entire day. Given that our subreddit dataset primarily focuses on the year 2022 (with some entries from 2023), we opted to filter out these anomalies as they pertain to older data not relevant to our analysis. This cleaning process resulted in the removal of 28 rows, reducing the dataset from 10,824 to 10,796 rows. With these cleaning steps completed, the external dataset is now prepared for further analysis, free from noise values that could impact subsequent tasks.
+            </p>
+            <p>
+              Although we have written code to perform basic statistical analysis on Apple stock prices, due to the nature of our data—comprising stock prices and trading volume—it is not particularly useful to analyze individual stock symbols' mean, mode, median, and standard deviation on their own. This is because these statistics require complementation with a time variable. Even when we divide the time range into stable periods, upward trends, and downturns, calculating various price statistics like mean, mode, median, and standard deviation does not yield highly informative results. Therefore, for basic statistical analysis, we did not conduct further analysis.
+            </p>
+            <p>
+              Our external source primarily focuses on the analysis of the years 2022, 2019-2023, and 2014-2023 (stock price data for 2023 only extends to November 16, 2023). Finally, we will explore the correlation between Apple stock prices and our iPhone subreddit dataset. The emphasis on analyzing the year 2022 is due to our iPhone subreddit dataset being primarily centered around that year, with only January data available for 2023, lacking a complete year's worth of data. Firstly, based on the timeline of iPhone versions released over the past decade, which we collected from official Apple website:
+            </p>
+            <!-- iPhone Version and Release Date Table -->
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>iPhone Version & Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>iPhone 6 & 6 Plus - September 9, 2014</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>iPhone 6s & 6s Plus - September 9, 2015</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>iPhone SE - March 31, 2016<br>iPhone 7 & 7 Plus - September 7, 2016</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>iPhone 8 & 8 Plus - September 12, 2017</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>iPhone XS & XS Max - September 12, 2018<br>iPhone XR - September 12, 2018</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>iPhone 11 Series - September 10, 2019</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>iPhone SE 2 - April 15, 2020<br>iPhone 12 Series - October 13, 2020</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>iPhone 13 Series - September 14, 2021</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>iPhone SE 3 - March 8, 2022<br>iPhone 14 Series - September 7, 2022</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>iPhone 15 Series - September 12, 2023</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>2022</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="../data/plots/2022-1.png" alt="Image 1" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2022-2.png" alt="Image 2" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2022-3.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2022-4.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="../data/plots/2022-5.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2022-6.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2022-7.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2022-8.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>2019-2022</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="../data/plots/2019-1.png" alt="Image 1" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2019-2.png" alt="Image 2" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2019-3.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2019-4.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="../data/plots/2019-5.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2019-6.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2019-7.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2019-8.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>2014-2022</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      <img src="../data/plots/2014-1.png" alt="Image 1" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2014-2.png" alt="Image 2" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2014-3.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2014-4.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="../data/plots/2014-5.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2014-6.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="../data/plots/2014-7.png" alt="Image 3" style="max-width: 100%; height: auto;">
+    </td>
+    <td>
+      <img src="../data/plots/2014-8.png" alt="Image 4" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+
+</table>
+<p>
+  According to Apple's scatterplots depicting date and prices (open, high, low, close) in 2022, we observed an overall downward trend in Apple's stock prices, especially during the months of iPhone new version releases (March 2022 and September 2022). However, when considering Apple's performance over the past five or ten years, we find that Apple's stock prices have shown an overall upward trend during the last decade. Although there was a decline in 2022, the stock prices in 2022 remained at a high level within the context of the past decade. From the scatterplots of date and volume, it is evident that from 2014 to 2023, the trading volume reached its peak in 2014, marking the highest point in the group of scatterplots. Overall, the trading volume has shown a declining trend. Additionally, we observed that each year after September (the month when new iPhones are announced), the trading volume seems to decrease. The actual reasons for this trend may require further analysis using alternative methods.
+
+</p>
+<p>
+  In the CloseOpenDiff-Date scatterplots, the y-axis represents the difference between the previous day's 'Adj Close' and the current day's 'Open.' If this number is negative, it means that the stock price increased at the opening of the day, and if it's positive, it indicates a decrease in the opening stock price. Additionally, the further the scatterplot is from zero, the greater the increase or decrease in price, indicating more significant post-market events that led to such significant deviations. From Apple’s these types of scatterplots, we could see that there were more occurrences of these abnormal events in 2020 to 2023, resulting in larger fluctuations in the deviation values. Over the past few years, the difference between the previous day's closing price and the day's opening price has been increasing since September.
+
+</p>
+<p>
+  Overall, we can observe that except for Apple’s stock price falling in the iPhone release month (mainly September) in 2015 (iPhone 6s & 6s Plus) and 2022 (iPhone 14 Series), in the rest of the years, after September, the stock price almost all are showing an upward trend. However, it's important to note that stock price fluctuations are typically influenced by various factors, including macroeconomic conditions, industry trends, company financial reports, legal changes, and shifts in competitive landscapes. Therefore, we can only observe that, over the past decade, almost every year after the announcement of a new iPhone version, stock prices tend to rise. This could be attributed to the positive outlook of the investing public towards Apple's prospects, or there is even a possibility that stock prices are influenced by institutional trading (though the core decisions behind these actions are discreet and non-public), and we have no way of knowing. It's important to acknowledge that while there is a correlation, correlation does not imply causation.
+</p>
+<p>
+  The above is our analysis of whether the announcement of new iPhone products by Apple in recent years has an impact on the company's stock prices. Next, we would like to explore whether the discussion intensity on Reddit significantly increases when Apple announces new iPhone products in 2022. Due to the vast amount of Reddit data, our current dataset primarily covers the year 2022. Therefore, this analysis focuses on 2022 and specifically analyzes the Comment dataset (Submission dataset is not included in the analysis). Based on our testing and comparison results, the discussion intensity is currently higher for iPhone models 10 to 15. Therefore, we emphasize the analysis of the number of mentions for these iPhone models in various months, considering it as a measure of discussion intensity.
+</p>
+<!-- iPhone 10 Table -->
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 10</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<!-- iPhone 11 Table -->
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 11</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+<!-- iPhone 12 Table -->
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 12</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+</table>
+<!-- iPhone 13 Table -->
+
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 13</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>107</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>192</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>75</td>
+    </tr>
+  </tbody>
+</table>
+<!-- iPhone 14 Table -->
+
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 14</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>302</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>72</td>
+    </tr>
+  </tbody>
+</table>
+<!-- iPhone 15 Table -->
+<table class="dataframe table table-sm table-striped">
+  <caption>iPhone 15</caption>
+  <thead>
+    <tr>
+      <th>month(created_utc)</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+  In March 2022, Apple announced the iPhone SE 3, and in September, they announced the iPhone 14 Series. The mention of the iPhone 15 is likely related to Reddit users' comments speculating and making predictions about future iPhone versions. From the number of mentions for the various iPhone models mentioned above, we can observe that in 2022, iPhone 10 had fewer mentions, aligning with our intuition. On the other hand, iPhone 11 to 14 remained popular, still generating significant discussion. Moreover, from the above tables, it is evident that mentions of iPhone 11 to 14 increased noticeably after September 2022, especially for iPhone 12 to 14. Combining the above analysis of Apple's stock prices, we inferred that after Apple announces new products every September, there is a clear surge in public attention, both in the stock market and on Reddit. This suggests that Apple continues to be a leader in this regard, with a significant increase in public interest after each annual product announcement in September.
+</p>
+
+    </section>
+</section>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-14">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
