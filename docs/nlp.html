@@ -80,6 +80,10 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link active" href="./introduction.html">
+      <span class="menu-text">Introduction</span></a>
+    </li>
+  <li class="nav-item">
     <a class="nav-link" href="./eda.html">
  <span class="menu-text">EDA</span></a>
   </li>  
@@ -92,8 +96,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">ML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./summary.html">
- <span class="menu-text">Summary</span></a>
+    <a class="nav-link" href="./conclusion.html">
+ <span class="menu-text">Conclusion</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="./feedback.html">
+ <span class="menu-text">Feedback</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -110,11 +118,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 id="toc-title">Contents</h2>
 
 <ul>
-<li><a href="#NLP-1" id="NLP 1" class="nav-link active" data-scroll-target="#data-information-and-introduction">NLP 1</a></li>
+  <li><a href="#executive-summary" id="executive summary" class="nav-link" data-scroll-target="#data-information-and-introduction">Executive Summary</a></li>
+<li><a href="#NLP-1" id="NLP 1" class="nav-link" data-scroll-target="#data-information-and-introduction">NLP 1</a></li>
 <li><a href="#NLP-2" id="NLP 2" class="nav-link" data-scroll-target="#data-cleaning">NLP 2</a></li>
 <li><a href="#NLP-3" id="NLP 3" class="nav-link" data-scroll-target="#dataset-overview">NLP 3</a></li>
 <li><a href="#NLP-4" id="NLP 4" class="nav-link" data-scroll-target="#dataset-overview">NLP 4</a></li>
-<li><a href="#External-dataset" id="external-dataset" class="nav-link" data-scroll-target="#dataset-overview">External: Stock Data</a></li>
+<li><a href="#external-dataset" id="external-dataset" class="nav-link" data-scroll-target="#dataset-overview">External: Stock Data</a></li>
 </ul>
 </nav>
 </div>
@@ -129,7 +138,21 @@ ul.task-list li input[type="checkbox"] {
     <p><a href="../website/project-nlp-4.html">Note:Link to the source code - 4</a></p>
     <p><a href="../website/external_source.html">Note:Link to the source code - external dataset</a></p>
     
-    
+    <section id="executive-summary" class="level2">
+      <h2 class="anchored" data-anchor-id="Executive-Summary">Executive Summary</h2>
+      <p>
+        Our Natural Language Processing (NLP) endeavors have been integral in elevating user engagement and content relevance within the "iPhone" subreddit. In NLP_1, our focus on creating prompts related to the iPhone 14 using the T5 model serves as a mechanism to stimulate user interest, fostering increased participation and interaction within the Reddit community. By generating automatic prompts, we contribute to an enriched user experience and a more vibrant Reddit ecosystem.
+      </p>
+      <p>
+        In NLP_2, our exploration centers on identifying the specific aspects of iPhone-related submissions that captivate the community. Utilizing a topic model, we unveil key discussion topics, simplifying the identification of clear and understandable themes within posts. This not only enhances content relevance but also facilitates meaningful discussions within the subreddit.
+      </p>
+      <p>
+        Tasks NLP_3 and NLP_4 delve into sentiment analysis. In NLP_3, we evaluate Reddit users' opinions on Apple product names, gaining insights into public sentiment. The results reveal a nuanced landscape, with positive sentiment at 47.8% and negative sentiment at 49.1%. Task NLP_4 extends our analysis to identify irony and sarcasm in user comments. Leveraging the insights from NLP_3, we discern that emotions categorized as joy or sadness in negative sentiment comments likely signify sarcasm. This understanding enriches our comprehension of nuanced communication on Reddit, further refining our interpretation of user sentiments.
+      </p>
+      <p>
+        In summary, our NLP initiatives contribute to a more engaging and insightful experience within the "iPhone" subreddit, fostering user participation, enhancing content relevance, and providing valuable insights into community sentiments.
+      </p>
+    </section>
     <section id="NLP-1" class="level2">
     <h2 class="anchored" data-anchor-id="NLp-1">NLP 1</h2>
             <p>
@@ -223,24 +246,24 @@ ul.task-list li input[type="checkbox"] {
               <p>
                 Drawing insights from the content of posts within the "iPhone" subreddit, our approach involved the implementation of a sophisticated topic model. This model served as a powerful tool to identify and encapsulate the prevailing themes that captivate the interest of the community within this specific domain. As we delved into the iPhone-related subreddit, our primary goal was to uncover the fundamental aspects that strike a chord with the community members. The utilization of a topic model not only allowed us to achieve this objective but also brought forth a wealth of noteworthy observations.
               </p>
-              <img src="../data/plots/hot_level_of_each_topic_all.png" alt="Image 1">
+              <img src="../data/plots/hot_level_of_each_topic_all.png" alt="Image 1" style="max-width: 100%;">
               
               <p>
                 At the forefront, the discourse within the community predominantly revolves around key subjects such as "skills," "questioning_criticism," "employee," "benefits," and "learning." The prominence of "questioning_criticism" and "skills" as dominant topics is indicative of a profound enthusiasm within the community to acquire knowledge and actively participate in discussions concerning various Apple products. These focal points underscore the community's fervor for staying well-informed and engaging in dialogues centered around Apple's diverse product offerings.
               </p>
-              <img src="../data/plots/hot_level_of_each_topic_combined.png" alt="Image 2">
+              <img src="../data/plots/hot_level_of_each_topic_combined.png" alt="Image 2" style="max-width: 100%;">
               
               <p>
                 Moreover, discussions pertaining to "employee" and "benefits" suggest a heightened interest in matters related to Apple as an employer. These discussions may unveil a collective curiosity regarding the experiences of Apple employees and the intrigue generated by the company's diverse product portfolio. In essence, our analysis reveals a multifaceted landscape within the iPhone-related subreddit, where the community's passion extends beyond product-centric discussions to encompass broader themes of professional engagement and corporate interest.
               </p>
-              <img src="../data/plots/hot_level_of_each_topic_word_cloud.png" alt="Image 3">
+              <img src="../data/plots/hot_level_of_each_topic_word_cloud.png" alt="Image 3" style="max-width: 100%;">
       </section>
       <section id="NLP-3" class="level2">
         <h2 class="anchored" data-anchor-id="NLP-3">NLP 3</h2>
               <p>
                 Based on the sentiment model, I detected the sentiment of all comments in the iPhone subreddit from 2022 to 2023. I found and excluded some errors, as well as some deleted comments. The probabilities of positive and negative sentiment appearing are evenly split. The assessments of Apple's products exhibit a balanced and reasoned approach, avoiding exclusively positive or negative sentiments.
               </p>
-              <img src="../data/plots/sentiment_analysis_pie.png" alt="Image 1">
+              <img src="../data/plots/sentiment_analysis_pie.png" alt="Image 1" style="max-width: 100%;">
       </section>
       <section id="NLP-4" class="level2">
         <h2 class="anchored" data-anchor-id="NLP-4">NLP 4</h2>
@@ -282,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
                   </tr>
                 </tbody>
               </table>
-              <img src="../data/plots/negative_sentiment_analysis_pie.png" alt="Image 1">
+              <img src="../data/plots/negative_sentiment_analysis_pie.png" alt="Image 1" style="max-width: 100%;">
 
               <p>
                 Methods two and three involve utilizing a Sarcasm Classifier (another type of model), which provides only two outcomes: normal and sarcasm. Additionally, since we tend to believe that sarcasm falls under negative sentiment (though this is only our speculation), in method two, we filtered the results of NLP_3 positive sentiment comments. We then invoked the Sarcasm Model to obtain normal or sarcasm results. As for our method three, it involves, once again, filtering the results of NLP_3 negative sentiment. Subsequently, we invoked the Sarcasm Model to obtain normal or sarcasm results. The following are the results of method two and three:
@@ -303,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
       <th rowspan="2">Method 2</th>
       <td>normal</td>
       <td>252723</td>
-      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_2.png" alt="Method 2 Image"></td>
+      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_2.png" alt="Method 2 Image" style="max-width: 100%;"></td>
     </tr>
     <tr>
       <td>sarcasm</td>
@@ -315,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
       <th rowspan="2">Method 3</th>
       <td>normal</td>
       <td>259313</td>
-      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_3.png" alt="Method 3 Image"></td>
+      <td rowspan="2"><img src="../data/plots/sarcasm_analysis_3.png" alt="Method 3 Image" style="max-width: 100%;"></td>
     </tr>
     <tr>
       <td>sarcasm</td>

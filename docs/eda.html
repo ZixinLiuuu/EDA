@@ -143,6 +143,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link active" href="./introduction.html">
+      <span class="menu-text">Introduction</span></a>
+    </li>
+  <li class="nav-item">
     <a class="nav-link active" href="./eda.html" aria-current="page">
  <span class="menu-text">EDA</span></a>
   </li>  
@@ -155,8 +159,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">ML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./summary.html">
- <span class="menu-text">Summary</span></a>
+    <a class="nav-link" href="./conclusion.html">
+ <span class="menu-text">Conclusion</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="./feedback.html">
+ <span class="menu-text">Feedback</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -174,7 +182,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 id="toc-title">Contents</h2>
 
 <ul>
-<li><a href="#EDA-1" id="EDA 1" class="nav-link active" data-scroll-target="#data-information-and-introduction">EDA 1</a></li>
+<li><a href="#executive-summary" id="executive summary" class="nav-link" data-scroll-target="#data-information-and-introduction">Executive Summary</a></li>
+<li><a href="#EDA-1" id="EDA 1" class="nav-link" data-scroll-target="#data-information-and-introduction">EDA 1</a></li>
 <li><a href="#EDA-2" id="EDA 2" class="nav-link" data-scroll-target="#data-cleaning">EDA 2</a></li>
 <li><a href="#EDA-3" id="EDA 3" class="nav-link" data-scroll-target="#dataset-overview">EDA 3</a></li>
 </ul>
@@ -190,6 +199,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Exploratory Data Analysis</h1>
 <p><a href="../website/project_eda.html">Note:Link to the source code</a></p>
 
+<section id="executive-summary" class="level2">
+  <h2 class="anchored" data-anchor-id="Executive-Summary">Executive Summary</h2>
+          <p>
+            Our Exploratory Data Analysis (EDA) journey delved into key aspects of the "iPhone" subreddit, revealing valuable insights that align with our business objectives. 
+          </p>
+          <p>
+            In EDA 1, our focus on the top 10 most frequent posters provided a lens into the community's dynamics. By analyzing their contributions in submission posts, we uncovered influential contributors, offering a glimpse into popular topics and trends. This exploration contributes to our understanding of user interests and the community's pulse.
+          </p>
+          <p>
+            Moving to EDA 2, we aimed to unveil user activity patterns. By defining peak and trough periods and analyzing timestamps, we created an activity distribution chart. This dynamic representation sheds light on the day-to-day rhythms of the subreddit, empowering us to optimize content delivery and moderation schedules for enhanced user engagement.
+          </p>
+          <p>
+            In EDA 3, our objective was to assess the discussion frequency of different iPhone versions. By filtering and analyzing posts related to iPhone versions, we gained statistical insights into which versions spark higher levels of discussion. This knowledge informs product-related strategies and aligns with our overarching goal of understanding and maximizing engagement within the "iPhone" subreddit.
+          </p>
+</section>
 
 <section id="EDA-1" class="level2">
 <h2 class="anchored" data-anchor-id="EDA-1">EDA 1</h2>
@@ -207,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="EDA-2" class="level2">
   <h2 class="anchored" data-anchor-id="EDA-2">EDA 2</h2>
-          <img src="../data/plots/Activity_Distribution_in_the_iPhone_Subreddit.png" alt="Image 3">
+          <img src="../data/plots/Activity_Distribution_in_the_iPhone_Subreddit.png" alt="Image 3" style="max-width: 100%;">
           <p>
             The heatmap visualization provides a clear visual representation of activity levels throughout the week, with the intensity of the color corresponding to the level of activity. The darkest blocks, representing the highest activity. 
           </p>

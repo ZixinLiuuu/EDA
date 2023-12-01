@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Website {{&lt; var topic.name &gt;}} – ml</title>
+<title>DSAN6000 Group 14 - ML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Website Lorem Ipsum</span>
+    <span class="navbar-title">DSAN 6000 Group 14</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -79,6 +79,10 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./introduction.html">
+      <span class="menu-text">Introduction</span></a>
+    </li>
   <li class="nav-item">
     <a class="nav-link" href="./eda.html">
  <span class="menu-text">EDA</span></a>
@@ -92,9 +96,13 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">ML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./summary.html">
- <span class="menu-text">Summary</span></a>
-  </li>  
+    <a class="nav-link" href="./conclusion.html">
+ <span class="menu-text">Conclusion</span></a>
+  </li> 
+  <li class="nav-item">
+    <a class="nav-link active" href="./feedback.html">
+ <span class="menu-text">Feedback</span></a>
+  </li> 
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -107,10 +115,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#ml" id="toc-ml" class="nav-link active" data-scroll-target="#ml">ML</a></li>
+  <li><a href="#executive-summary" id="toc-ml" class="nav-link active" data-scroll-target="#ml">Executive Summary</a></li>
+  <li><a href="#ML-1" id="toc-ml1" class="nav-link active" data-scroll-target="#ml">ML 1</a></li>
+  <li><a href="#ML-2" id="toc-ml2" class="nav-link active" data-scroll-target="#ml">ML 2</a></li>
+  <li><a href="#ML-3" id="toc-ml3" class="nav-link active" data-scroll-target="#ml">ML 3</a></li>
   </ul>
 </nav>
     </div>
@@ -121,7 +132,248 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="ml" class="level1">
 <h1>ML</h1>
+    <p><a href="../website/ml1.html">Note:Link to the source code - 1</a></p>
+    <p><a href="../website/ml2.html">Note:Link to the source code - 2</a></p>
+    <p><a href="../website/ml3.html">Note:Link to the source code - 3</a></p>
 
+
+<section id="executive-summary" class="level2">
+  <h2 class="anchored" data-anchor-id="Executive-Summary">Executive Summary</h2>
+  <p>
+    Our Machine Learning (ML) initiatives within the "iPhone" subreddit aim to enhance user experience, content organization, and community engagement. In ML_1, our business goal revolves around predicting the level of topic engagement for posts. With a machine learning model for classification, we forecast whether an input post is likely to become a highly discussed topic, contributing to a more insightful and engaging community.
+  </p>
+  <p>
+    In ML_2, our objective is to create an automated system for accurate content classification within the "iPhone" subreddit. This classification system enhances content organization, providing users with a more streamlined and relevant experience.
+  </p>
+  <p>
+    ML_3 focuses on the business goal of determining whether a comment will be stickied. Through NLP model utilization to extract key information and features from comments, we train a machine learning model using relevant data such as score and controversiality. The model predicts the likelihood of a comment being stickied, streamlining moderation efforts and contributing to an organized and well-maintained community.
+  </p>
+</section>
+</section>
+<section id="ML-1" class="level2">
+  <h2 class="anchored" data-anchor-id="EDA-1">ML 1</h2>
+          <p><strong>Analysis:</strong>
+          <p>
+            The prediction results of logistic regression model is 0.7731365159128978. The following is the impact index of different attributes on post popularity in the logistic regression 
+          </p>
+          <p><strong>Model:</strong></p>
+          <img src="../data/plots/ml_1.png" alt="Image 1">
+
+            <table class="dataframe table table-sm table-striped">
+              <thead>
+                <tr>
+                  <th>Name of Parameters</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>stickied_int</td>
+                  <td>19.48034014033475</td>
+                </tr>
+                <tr>
+                  <td>edited_int</td>
+                  <td>0.739907124805156</td>
+                </tr>
+                <tr>
+
+                  <td>is_self_int</td>
+                  <td>0.2168240866027578</td>
+                </tr>
+                <tr>
+
+                  <td>hour</td>
+                  <td>0.009130504845957588</td>
+                </tr>
+                <tr>
+         
+                  <td>day_of_week</td>
+                  <td>-0.005687518937613438</td>
+                </tr>
+                <tr>
+                
+                  <td>features</td>
+                  <td>-0.029843402129460316</td>
+                </tr>
+                <tr>
+                 
+                  <td>locked_int</td>
+                  <td>-0.6851923857361955</td>
+                </tr>
+                <tr>
+                  
+                  <td>over_18_int</td>
+                  <td>-0.7377361318639629</td>
+                </tr>
+              </tbody>
+            </table>
+          <p>
+            stickied_int (19.4803): There is a significant positive correlation between a post being stickied and its popularity. This feature has the highest coefficient, suggesting that once a post is stickied, it is highly likely to achieve greater popularity.
+          </p>
+          <p>
+            edited_int (0.7399) and is_self_int (0.2168): Whether a post has been edited (edited) and whether it is original content (is_self) also positively correlate with popularity. Although their impact is not as pronounced as that of stickied posts, they still indicate a positive role of editing and original content in enhancing a post’s popularity.
+          </p>
+          <p>
+            hour (0.0091), day_of_week (-0.0057), and features (-0.0298): The timing of the post (hour and day of the week) and the TF-IDF score of the text content have only minor impacts on a post’s popularity. These factors may play some role but are not decisive in determining whether a post becomes popular.
+          </p>
+          <p>
+            locked_int (-0.6852) and over_18_int (-0.7377): Whether a post is locked (locked) and whether it contains adult content (over_18) show a negative correlation with popularity. This suggests that posts that are locked and those with adult content tend to be less popular, possibly due to their limited visibility and acceptability.
+          </p>
+          
+</section>
+<section id="ML-2" class="level2">
+  <h2 class="anchored" data-anchor-id="EDA-1">ML 2</h2>
+          <p><strong>Analysis:</strong>
+          <p>
+            In the ML 2 task, we attempted to construct a model for accurately classifying whether a submission belongs to the "iPhone" subreddit or not. We made this determination based on the "self-text" and "title" of submission posts. Initially, we read the parquet file of the "iPhone" subreddit and the "non-iPhone" subreddit, changing the content of the "subreddit" column in the non-iPhone subreddit to "not iphone" as the label (iphone vs. not iphone). These labels will be used during the subsequent model training. We then united the two subreddits to create the final dataframe to be used. Next, we tokenized the "selftext" and "title" columns, used Word2Vec to generate features, and created a pipeline. By fitting the model, we transformed the "title" and "selftext" columns into "features_title" and "features_selftext". Subsequently, we utilized VectorAssembler to merge the generated features into a single feature vector ('combined_features'). This process represents the feature processing steps. Moving on to the label, we applied StringIndexer to encode the "subreddit" column into numerical labels ('label'). These labels were then combined with the features. After splitting the data generated through the above processes into training and testing subsets, we created a classification model. Using the 'combined_features' in the data, we classified it with a Random Forest Classifier. We opted for the Random Forests Algorithm for the classification task as it is known for generally providing high Accuracy and balancing the bias-variance trade-off effectively. Finally, we evaluated our ML2 model using Accuracy, confusion matrix, F1 score, and R-squared score.
+          </p>
+          <p><strong>Test Results:</strong></p>
+          <img src="../data/plots/ml2_1.jpg" alt="Image 1">
+
+            <table class="dataframe table table-sm table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Measurement</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>0</th>
+                  <td>Accuracy</td>
+                  <td>0.8532</td>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>Test Error</td>
+                  <td>0.1468</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>F1 Score</td>
+                  <td>0.8523</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>R2 Score</td>
+                  <td>0.3870</td>
+                </tr>
+              </tbody>
+            </table>
+          <p>
+            Based on the above test results, our model seems to be performing reasonably well, demonstrating a high Accuracy and a relatively balanced F1 score (a large F1 score). Additionally, the confusion matrix provides a more detailed breakdown of the model's performance on each class (TP, TN, FP, FN). Although the R-squared score is approximately 0.3869, suggesting that the model explains about 38.69% of the variance in the target variable, ML 2 is actually a classification task, not a regression task. Therefore, it is more suitable to use Accuracy, the Confusion Matrix, and the F1 score in our case. The R-squared score might not be the most appropriate metric to evaluate our model since the R-squared score is more relevant for regression tasks. It's not uncommon to have a high Accuracy and F1 score but a lower R-squared score, especially if the focus is on classification Accuracy rather than predicting a continuous variable. Therefore, based on our results, the Accuracy of our model’s performance in classification is around 85.32%.
+          </p>
+          
+</section>
+  
+<section id="ML-3" class="level2">
+  <h2 class="anchored" data-anchor-id="ML-3">ML 3</h2>
+          <p><strong>Analysis:</strong>
+          <p>
+            In ML 3 task, we aimed to construct a model for predicting whether a comment would be stickied. To achieve this, we utilized scores for sentiment, score, controversiality, and comment type (topic) obtained from the previous NLP 3 comment dataset. Hence, we first read the parquet file from NLP 3 (ml4_related_comments.parquet) and extracted the "sentiment" for each comment. These parquet files already contained data for columns "controversiality," "gilded," "body," "score," "stickied," and "topic," where "topic" represents our custom-defined topics—five categories in total (chip, screen, other, camera, and storage). These topics were of particular interest in our iPhone subreddit dataset. Next, we preprocessed this data. For "score", scores less than 0 were labeled as low, scores equal to 0 were labeled as medium, and scores greater than 0 were labeled as high. For "controversiality", a value of 0 was marked as False, and a value of 1 was marked as True. Additionally, we converted the "stickied" column from boolean to string. Subsequently, we selected the portion of the "sentiment" column that was positive or negative, dropping any empty or NA values. Following this, we split the dataset into training, testing, and validation subsets. Moving on to label processing, we used StringIndexer to convert categorical columns ("stickied", "topic", "sentiment", "score_category", "controversiality_category") into numerical indices, assigning unique indices to each category. We then transformed some indices ("topic" and "score_category") into binary vectors using OneHotEncoder. Next, we assembled these features into a single vector ('features') using VectorAssembler, creating a feature vector suitable for machine learning models. Subsequently, we created a classification model using "stickied_result" as labels and "features" as features, employing a Random Forest Classifier for classification. After classification, we reverted the numerical predictions back to the original labels using IndexToString. Finally, we evaluated our ML 3 model using Accuracy, Confusion Matrix, F1 score, and R-squared score. However, since ML 3 task is also a classification task, the R-squared score is only for reference and is not analyzed.
+          </p>
+          <p><strong>Test Results - For the First Model:</strong></p>
+          <img src="../data/plots/ml3_1.jpg" alt="Image 1">
+
+            <table class="dataframe table table-sm table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Measurement</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>0</th>
+                  <td>Accuracy</td>
+                  <td>0.951597</td>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>Test Error</td>
+                  <td>0.0484027</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>F1 Score</td>
+                  <td>0.9279962456630151</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>R2 Score</td>
+                  <td>-0.05086464039927496</td>
+                </tr>
+              </tbody>
+            </table>
+          <p>
+            The above is the results of our first model. However, this model has a problem—it only predicts results as false. Because the majority of comments are not stickied, the Accuracy is very high (0.9516) and F1 score is also very high (0.928). The reason for this issue may be that stickied comments constitute a very small proportion of the overall dataset. There are 28,866 stickied comments, whereas there are 570,806 comments that are not stickied.
+          </p>
+          <table class="dataframe table table-sm table-striped">
+            <thead>
+              <tr>
+                <th>Stickied</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>False</td>
+                <td>570806</td>
+              </tr>
+              <tr>
+                <td>True</td>
+                <td>28866</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Therefore, we created a new dataset that includes all 28,866 stickied comments and randomly selected 20,000 non-stickied comments from the overall dataset. In our second model, trained on this refined dataset, the accuracy is not as high as the first model (just 0.6692), but the model's output is more reasonable. Therefore, for our ML 3 task, we present the performance of this model in the end.
+          </p>
+          <table class="dataframe table table-sm table-striped">
+            <thead>
+              <tr>
+                <th>Stickied</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>False</td>
+                <td>20000</td>
+              </tr>
+              <tr>
+                <td>True</td>
+                <td>28866</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Test Results - For the Second(Final) Model:</strong></p>
+          <img src="../data/plots/ml3_2.jpg" alt="Image 1">
+          <table class="dataframe table table-sm table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Measurement</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>0</th>
+                <td>Accuracy</td>
+                <td>0.669181</td>
+              </tr>
+              <tr>
+                <th>1</th>
+                <td>Test Error</td>
+                <td>0.330819</td>
+              </tr>
+            </tbody>
+          </table>
+          
+</section>
 
 </section>
 
@@ -262,7 +514,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content 2023 by [Project Team 1] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
     <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/anly503/lab-2.1">View the source at GitHub</a></div>
   </div>
 </footer>

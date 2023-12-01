@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DSAN6000 Group 14 - Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DSAN 6000 Group 14</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./introduction.html" aria-current="page">
+<span class="menu-text">Introduction</span></a>
+ </li> 
+  <li class="nav-item">
+    <a class="nav-link" href="./eda.html">
+ <span class="menu-text">EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html">
+ <span class="menu-text">NLP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./ml.html">
+ <span class="menu-text">ML</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion.html">
+ <span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./feedback.html">
+ <span class="menu-text">Feedback</span></a>
+  </li>
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- margin-sidebar -->
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+<h2 id="toc-title">Contents</h2>
+
+<ul>
+<li><a href="#introduction_to_the_project" id="introduction-to-the-project" class="nav-link" data-scroll-target="#data-information-and-introduction">Introduction to the Project</a></li>
+<li><a href="#project_goals_and_significance" id="project-goals-and-significance" class="nav-link" data-scroll-target="#data-cleaning">Goals and Significance</a></li>
+<li><a href="#why_we_do_this" id="why-we-do-this" class="nav-link" data-scroll-target="#dataset-overview">Why We Do This</a></li>
+<li><a href="#appendix1" id="appendix" class="nav-link" data-scroll-target="#dataset-overview">Appendix</a></li>
+</ul>
+
+</nav>
+</div>
+
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="Exploratory Data Analysis" class="level1">
+<h1>The iPhone Chronicles: Data Stories from the Subreddit</h1>
+
+
+<section id="introduction_to_the_project" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-project">Introduction to the Project</h2>
+<img src="../data/plots/r_iphone_1.jpg" alt="Image 1" style="max-width: 100%;">
+<figcaption>Image source: https://www.express.co.uk/life-style/science-technology/1666664/apple-iphone-14-review</figcaption>
+    <p>
+        Welcome to our exploration of the "iPhone" subreddit, where we embarked on a journey to unravel the dynamics of this vibrant online community. The "iPhone" subreddit serves as a digital hub where enthusiasts, users, and curious minds converge to share experiences, insights, and discussions about Apple's iconic smartphone.
+    </p>
+	<p>
+		Our project is driven by the curiosity to understand the heartbeat of this community—what engages its members, what topics ignite passionate conversations, and how the ebb and flow of user activity shape this virtual space.
+	</p>
+</section>
+<section id="project_goals_and_significance" class="level2">
+  <h2 class="anchored" data-anchor-id="project-goals-and-significance">Goals and Significance</h2>
+          <p>
+            Our overarching goal is to decode the nuanced interactions within the "iPhone" subreddit, providing valuable insights for both the community members and observers. We aim to identify key contributors, uncover popular discussion topics, analyze user sentiments, and enhance the overall user experience. By delving into patterns of user activity, sentiment analysis, and content relevance, we aspire to paint a comprehensive picture of the community dynamics. This endeavor is not just about numbers and data; it's about understanding the community's pulse, fostering meaningful discussions, and contributing to the enriched experience of "iPhone" enthusiasts.
+
+          </p>
+  </section>
+  <section id="why_we_do_this" class="level2">
+    <h2 class="anchored" data-anchor-id="why-we-do-this">Why We Do This</h2>
+    <img src="../data/plots/r_iphone.png" alt="Image 1" style="max-width: 100%;">
+    <figcaption>Image source: https://www.reddit.com/r/iphone/</figcaption>
+          <p>
+            The significance of this project lies in its potential to bridge the gap between data and community understanding. Unveiling the preferences, sentiments, and patterns within the "iPhone" subreddit not only aids community managers and content creators in tailoring their strategies but also provides community members with a deeper understanding of their collective interests. Beyond the numbers, this project strives to capture the essence of a digital community, where each post, comment, and interaction contributes to a vibrant tapestry of shared experiences.
+          </p>
+          
+  </section>
+  <section id="appendix1" class="level2">
+    <h2 class="anchored" data-anchor-id="appendix">Appendix: Goals and Technical Proposals</h2>
+    <h3>EDA 1</h3>
+    <p><strong>Business Goal:</strong> Analyze the top 10 most frequent posters in the “iPhone” subreddit. This analysis can help us understand the most active contributors within this specific subreddit, and could offer valuable insights. That is, these active posters may have a certain level of influence within the community, with their posts potentially attracting attention and responses from other users. This could be helpful in understanding the dynamics of the community and popular topics. Additionally, these posters likely cover various topics and discussions, so, by analyzing their posts, we could discover the most popular topics and trends within the “iPhone” subreddit. This helps in understanding user interest in iPhone products or related subjects. Therefore, we opted to examine the top 10 individuals who post most frequently within the "iPhone" subreddit (both in the submission and comment datasets).</p>
+
+    <p><strong>Technical Proposal:</strong> We will determine the occurrence count in the 'author' column within both the submission and comment datasets to identify the top 10 most frequent posters. Subsequently, we will present the results in two graphs to illustrate the findings separately.</p>
+
+    <h3>EDA 2</h3>
+    <p><strong>Business Objective:</strong> Uncover activity patterns of user activity in the "iPhone" subreddit, provide valuable insights into the day-to-day rhythms of the platform, and help optimize content delivery and moderation schedules.</p>
+    
+    <p><strong>Technical Proposal:</strong> Technical solution: Define the peak period as the top 5 posts within 24 hours, and the trough period as the bottom 5 posts within 24 hours. Then select a week. We will then extract the relevant timestamps from the submission dataset (using "created_utc"). These timestamps will be grouped by hour (so we have 24 groups), allowing us to calculate the frequency of user activity for each time period. Finally, make an activity distribution chart (the number of posts published in that hour) according to the day of the week.</p>
+
+    <h3>EDA 3</h3>
+    <p><strong>Business Goal:</strong> Statistics on the occurrence frequency of different iPhone versions are discussed to determine which version has a higher level of discussion.</p>
+
+    <p><strong>Technical Proposal:</strong> Read all Reddit posts, filter out those from the subreddit 'iphone,' use regular expressions to retrieve Reddit posts containing keywords related to iPhone versions, and then count the occurrences. Analyze the level of discussion for each iPhone version from the filtered posts.</p>
+
+    <h3>NLP 1</h3>
+    <p><strong>Business Goal:</strong> When users plan to post about the iPhone 14, the system will suggest potential questions based on historical data, enhancing user engagement and interaction. This approach is designed to enrich the user experience and stimulate user interest in posting.</p>
+
+    <p><strong>Technical Proposal:</strong> First, posts related to "iphone14" are filtered out. Then, the data undergoes preprocessing. Afterward, Spark NLP and the T5 model are used to analyze these texts and generate questions. These questions are subsequently used as automatic prompts when posting, helping users quickly find popular topics, thereby enhancing community interaction and user experience.</p>
+
+    <h3>NLP 2</h3>
+    <p><strong>Business Goal:</strong> Delve into iPhone-related submitted posts to pinpoint the specific aspects that capture the greatest interest from the community, all while simplifying the identification of clear and comprehensible discussion topics for posts.</p>
+
+    <p><strong>Technical Proposal:</strong> To achieve this, we will begin by filtering posts related to iPhones. Next, we will manually establish discussion topics specific to the iPhone and label relevant posts accordingly. Subsequently, we will leverage advanced models such as BERT, combined with TF-IDF analysis, to perform topic classification. This approach will allow us to categorize posts into topics and, through post counting, determine the top k most popular discussion topics surrounding iPhones.</p>
+
+    <h3>NLP 3</h3>
+    <p><strong>Business Goal:</strong> Evaluate the sentiment of Reddit users concerning particular Apple product titles, helping understand public perception and sentiment towards Apple products.</p>
+
+    <p><strong>Technical Proposal:</strong> We will utilize NLP techniques to analyze the content of the body of the essay. By employing sentiment analysis tools, we can classify comments into categories such as positive, negative, or neutral. This approach allows us to quantify the sentiment of the Reddit community regarding Apple product titles, providing a deeper understanding of how users perceive and discuss these products.</p>
+
+    <h3>NLP 4</h3>
+    <p><strong>Business Goal:</strong> Develop the capability to identify instances of sarcasm and irony in user comments around “iPhone” subreddit, enhancing the understanding of nuanced communication on Reddit.</p>
+
+    <p><strong>Technical Proposal:</strong> We will use a pre-trained NLP model specifically designed for detecting sarcasm and irony within the comments. Subsequently, we will fine-tune and optimize the model using the expansive Reddit dataset. By applying these models, we can systematically identify and deeply study the frequency and context of sarcastic and ironic expressions in user interactions, ultimately shedding light on the complexities of
+    
+    <h3>ML 1</h3>
+    <p><strong>Business Goal:</strong> Predicting Popularity of Posts in the iPhone Subsection. By analyzing various post features we intend to create a model capable of distinguishing between popular posts. This model will be a valuable tool for understanding the factors that contribute to a post's success and enhancing user experience within the iPhone community.    </p>
+
+    <p><strong>Technical Proposal:</strong> Begin with Data Preprocessing, selecting posts from 2022 to 2023 for relevance to ensure the dataset's relevance and timeliness. In Target Variable Definition, a Decision Tree Regression model assigns weights to scores and comments, categorizing posts as "popular" or "not." Feature Extraction involves converting post attributes into vectors. Then, we prepare training and validation sets and explore models like Logistic Regression, Random Forest, and Gradient Boosting Trees. This is followed by Model Optimization and Validation. Finally, we use coefficients or feature importance scores to understand the impact of different factors on post popularity.
+        
+    <h3>ML 2</h3>
+    <p><strong>Business Goal:</strong> Create an automated system to accurately classify if the content belongs to “iPhone” subreddit or not, improving content organization and user experience.</p>
+    
+    <p><strong>Technical Proposal:</strong> We will collect a large dataset of posts, including the content of the post and their associated subreddit categories. We will then label posts from “iPhone” subreddit with “Yes” and label the others with “No”. This dataset will serve as the training data for our classification machine learning model, designed for the purpose of predicting the most suitable subreddit for a given post. This content classification may need NLP techniques to extract features for each post.
+    
+    <h3>ML 3</h3>
+    <p><strong>Business Goal:</strong> Determine whether a comment will be stickied.</p>
+        
+    <p><strong>Technical Proposal:</strong> Retrieve all stickied comments. First, use an NLP model to extract valuable information from the posts, including their topic, sentiment, and other relevant features. Then, train a machine learning model using the processed content along with the score and controversiality. Use the model to predict whether a comment will be stickied.
+
+
+    
+      
+    </section>
+</section>
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-14">View the source at GitHub</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
