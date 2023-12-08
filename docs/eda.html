@@ -183,9 +183,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul>
 <li><a href="#executive-summary" id="executive summary" class="nav-link" data-scroll-target="#data-information-and-introduction">Executive Summary</a></li>
-<li><a href="#EDA-1" id="EDA 1" class="nav-link" data-scroll-target="#data-information-and-introduction">EDA 1</a></li>
-<li><a href="#EDA-2" id="EDA 2" class="nav-link" data-scroll-target="#data-cleaning">EDA 2</a></li>
-<li><a href="#EDA-3" id="EDA 3" class="nav-link" data-scroll-target="#dataset-overview">EDA 3</a></li>
+<li><a href="#EDA-1" id="EDA 1" class="nav-link" data-scroll-target="#data-information-and-introduction">Research on user activity in iphone community</a></li>
+<li><a href="#EDA-2" id="EDA 2" class="nav-link" data-scroll-target="#data-cleaning">Research on posts in iphone community</a></li>
+<li><a href="#EDA-3" id="EDA 3" class="nav-link" data-scroll-target="#dataset-overview">Reddit Impact Analysis</a></li>
 </ul>
 </nav>
 </div>
@@ -196,102 +196,301 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <section id="Exploratory Data Analysis" class="level1">
-<h1>Exploratory Data Analysis</h1>
-<p><a href="../website/project_eda.html">Note:Link to the source code</a></p>
+<h1>Reddit Community Dynamics and Influence Analysis (EDA)</h1>
+
+<p><a href="../website/poster_portrait_analysis.html">Note:Link to the source code of EDA 1</a></p>
+<p><a href="../website/popular_posts_analysis.html">Note:Link to the source code of EDA 2</a></p>
+<p><a href="../website/reddit_impact_analysis.html">Note:Link to the source code of EDA 3</a></p>
 
 <section id="executive-summary" class="level2">
   <h2 class="anchored" data-anchor-id="Executive-Summary">Executive Summary</h2>
           <p>
-            Our Exploratory Data Analysis (EDA) journey delved into key aspects of the "iPhone" subreddit, revealing valuable insights that align with our business objectives. 
+            The exploration begins with a deep dive into the community dynamics and influence within Reddit. We aim to dissect the patterns that define user engagement and influence the discourse within Apple-centric subreddits. Our Reddit Impact Analysis sought to understand and identify elements with substantial influence across different communities. By employing metrics such as the number of comments, score, and discussion duration, we gained a nuanced understanding of content impact, ranging from instant popularity to lasting influence. These accomplishments collectively contribute to a more profound understanding of user engagement, community dynamics, and influential factors on the Reddit platform, aligning with our overarching goal of providing strategic insights for community enhancement and business decision-making.
+
           </p>
-          <p>
-            In EDA 1, our focus on the top 10 most frequent posters provided a lens into the community's dynamics. By analyzing their contributions in submission posts, we uncovered influential contributors, offering a glimpse into popular topics and trends. This exploration contributes to our understanding of user interests and the community's pulse.
-          </p>
-          <p>
-            Moving to EDA 2, we aimed to unveil user activity patterns. By defining peak and trough periods and analyzing timestamps, we created an activity distribution chart. This dynamic representation sheds light on the day-to-day rhythms of the subreddit, empowering us to optimize content delivery and moderation schedules for enhanced user engagement.
-          </p>
-          <p>
-            In EDA 3, our objective was to assess the discussion frequency of different iPhone versions. By filtering and analyzing posts related to iPhone versions, we gained statistical insights into which versions spark higher levels of discussion. This knowledge informs product-related strategies and aligns with our overarching goal of understanding and maximizing engagement within the "iPhone" subreddit.
-          </p>
+          
 </section>
 
+
 <section id="EDA-1" class="level2">
-<h2 class="anchored" data-anchor-id="EDA-1">EDA 1</h2>
-				<img src="../data/plots/Top_10_Posters_in_Submission.png" alt="Image 1">
-				<img src="../data/plots/Top_10_Posters_in_Comment.png" alt="Image 2">
-				<p>
-					Based on the Submission and Comment Dataset analysis in the "iPhone" subreddit, we observed that AutoModerator, PJ09, and Select-Background-69 are among the top 10 most frequent posters in both datasets. This indicates their relative enthusiasm and engagement with the "iPhone" topic within this subreddit. Consequently, these three individuals regularly contribute to both datasets, suggesting that their posts might offer valuable insights. However, further investigation is required to ascertain the quality of their contributions.
-				</p>
-				<p>
-					One approach is to filter their posts and examine the "score" column (number of upvotes minus number of downvotes) to gauge whether these individuals receive relatively high scores. Additionally, analyzing the comments on their posts using methods such as Natural Language Processing (NLP) or Machine Learning (ML) can offer insights into the sentiment—whether it is positive or negative. In essence, this research (two graphs) serves as a starting point, providing initial insights that can prompt further, more in-depth research.
-				</p>
-				<p>
-					Furthermore, we also observed that there is a significant difference in the number of posts between the two datasets. While it aligns with our expectations that the number of posts in the submission dataset is less than that in the comment dataset, the magnitude of difference between the quantities in both datasets is rather surprising.
-				</p>
+<h2 class="anchored" data-anchor-id="EDA-1">Research on user activity in iphone community (EDA 1)</h2>
+<p><strong>A Reminder for Our Business Goal:</strong>Conducting user activity research in the iphone subreddit is critical to understanding community dynamics, especially how important product launches like the iPhone 14 impact user engagement. This research benefits community managers, marketers, and product developers by revealing user interaction patterns and identifying key influencers. These insights can effectively inform marketing strategies, product development and customer engagement approaches.</p>
+<p><strong>Analysis:</strong>  
+        <p>
+          Understanding user engagement in online communities, especially surrounding key events like product launches, is essential. This chart depicts the activity levels of iPhone subreddit users from March to July 2022, a period before the iPhone 14 release. It serves to illustrate the impact of such events on user behavior. By analyzing posting and commenting patterns quantified through a specific activity formula, we can observe the distribution of top contributors' engagement, providing actionable insights for community managers, marketers, and product developers as they strategize for post-launch activities.
+        </p>
+				<iframe src="../website/eda1_1.html" width="800" height="600"></iframe>
+        <p>
+          This dynamic diagram is the top 15 users were active from March to July.
+        </p>
+        <p>
+          The selection of the top 15 most active contributors for analysis is based on the principles of the Pareto 80/20 rule[Referenced the information provided by AI], where a small number of contributors (in this case the top 15) are expected to account for activity and influence within the Reddit subreddit A large part of the force. This focused approach enables more manageable and targeted analysis, resulting in clearer patterns and actionable findings. From the figure we can see, except for two prominent contributors, the main contributors on the iPhone subreddit from March to July (that is, between the iPhone 13 and iPhone 14 release cycles) have a relatively even distribution of activity. This suggests that during the lull after the iPhone 13 launch and before the iPhone 14 launch, relatively balanced activity reflected a broader range of topics, with no single contributor dominating the narrative and a diverse community of discussions. And this kind of diversified participation helps determine users' interest in general iPhone products, helps readers and users obtain a wide range of suggestions, and also helps Apple to adopt opinions.
+        </p>
+        <iframe src="../website/eda1_2.html" width="800" height="600"></iframe>
+        <p>
+          This dynamic diagram is the top 15 users were active from August to December. 
+        </p>
+        <p>
+          After the iPhone 14 launch, the subreddit's contributor dynamics shifted significantly. First of all, the activity of active contributors has been greatly improved. Secondly, a very obvious "leader" has emerged. There are three contributors with very large contributions, and the other contributors are in a relatively balanced state. The presence of three highly active contributors may indicate that a small group of users drives most discussions. This change may result in a single discussion environment where specific topics or perspectives become more visible under the influence of these dominant voices. However, this centralized discussion mode helps readers and users find iPhone14 information more quickly and efficiently. It also helps Apple to grasp public opinion trends in a timely manner and adjust its market and product strategies.
+        </p>
+        <p>
+          Later, in order to understand whether the contributors in these two time periods overlapped and to explore the contributor pattern in the iPhone community, we marked the user names that were repeatedly listed in the two time periods.
+        </p>
+        <table class="dataframe table table-sm table-striped">
+          <thead>
+              <tr>
+                  <th>Author</th>
+                  <th>Repeat Time</th>
+                  <th>3-7 Activity</th>
+                  <th>8-12 Activity</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Simon_787</td>
+                  <td>2</td>
+                  <td>430</td>
+                  <td>856</td>
+              </tr>
+              <tr>
+                  <td>Pantheon73</td>
+                  <td>2</td>
+                  <td>182</td>
+                  <td>247</td>
+              </tr>
+              <tr>
+                  <td>JohnFlufin</td>
+                  <td>2</td>
+                  <td>162</td>
+                  <td>559</td>
+              </tr>
+              <tr>
+                  <td>3dforlife</td>
+                  <td>2</td>
+                  <td>102</td>
+                  <td>123</td>
+              </tr>
+              <tr>
+                  <td>D_Empire412</td>
+                  <td>2</td>
+                  <td>112</td>
+                  <td>180</td>
+              </tr>
+              <tr>
+                  <td>PJ09</td>
+                  <td>1</td>
+                  <td>243</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>WahidUmmah4312</td>
+                  <td>1</td>
+                  <td>244</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>katsumiblisk</td>
+                  <td>1</td>
+                  <td>460</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>zerbey</td>
+                  <td>1</td>
+                  <td>245</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>iphone14vn</td>
+                  <td>1</td>
+                  <td>225</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Wallaceb3878</td>
+                  <td>1</td>
+                  <td>189</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>keffordman</td>
+                  <td>1</td>
+                  <td>116</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>Allowmancer</td>
+                  <td>1</td>
+                  <td>161</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>NickyGi</td>
+                  <td>1</td>
+                  <td>113</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>iphone12case</td>
+                  <td>1</td>
+                  <td>110</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>dislikebuttonz</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>716</td>
+              </tr>
+              <tr>
+                  <td>Golfswingfore24</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>191</td>
+              </tr>
+              <tr>
+                  <td>JaxTellerr</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>147</td>
+              </tr>
+              <tr>
+                  <td>paulrudder</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>123</td>
+              </tr>
+              <tr>
+                  <td>owtlowd</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>115</td>
+              </tr>
+              <tr>
+                  <td>antdude</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>112</td>
+              </tr>
+              <tr>
+                  <td>Administratr</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>111</td>
+              </tr>
+              <tr>
+                  <td>abdallahzeid</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>105</td>
+              </tr>
+              <tr>
+                  <td>lagiphone</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>105</td>
+              </tr>
+              <tr>
+                  <td>pohatu771</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>104</td>
+              </tr>
+          </tbody>
+        </table>
+        <p>
+          This is a table of contributors in two time periods. A repeat value of 2 means that the user has been on the list twice.
+        </p>
+        <p>
+          We can see from the table that only 5 usernames were on the list during the window period before and after iphone14 was released; the other users only existed in a single list.
+        </p> 
+        <p> 
+          This shows that most of the contributors do not overlap. This shows that the same group of active contributors did not contribute content before and after the release of iPhone 14. The contributor pattern has changed dynamically. Obviously, the two groups of people have different interests in the iPhone.
+        </p>  
+        <p>
+          We can infer that the release of iPhone 14 may have attracted users with more investment or interest in the new model, or there may have been many users who are not usually active, leading to changes in the contribution model.
+        </p>
+				
 </section>
 <section id="EDA-2" class="level2">
-  <h2 class="anchored" data-anchor-id="EDA-2">EDA 2</h2>
-          <img src="../data/plots/Activity_Distribution_in_the_iPhone_Subreddit.png" alt="Image 3" style="max-width: 100%;">
-          <p>
-            The heatmap visualization provides a clear visual representation of activity levels throughout the week, with the intensity of the color corresponding to the level of activity. The darkest blocks, representing the highest activity. 
-          </p>
-          <p>
-            <strong>Early Morning Hours (Midnight to 6 am):</strong> These hours consistently show the lightest color across all days of the week, indicating the lowest user activity. This is expected as it typically corresponds to nighttime or early morning in many parts of the world, when users are likely to be asleep.
+  <h2 class="anchored" data-anchor-id="EDA-2">Research on posts in iphone community (EDA 2)</h2>
+  <p><strong>A Reminder for Our Business Goal:</strong>Conduct An in-depth exploration of popular posts on the iPhone Reddit subreddit, designed to provide users, forum moderators, and technology companies with effective recommendations so that they can better serve the interests and needs of the community, and potentially influence future product discussions. and development.  </p>
+  <p><strong>Analysis:</strong>  
+    <p>After conducting an in-depth study of active contributors, and to gain a deeper understanding of the patterns of the iPhone community, we took an in-depth look at the posting patterns of the iPhone Reddit subreddit, aiming to provide useful insights for users, moderators, and technology companies.</p>
+    
+    <p>The analysis focuses on two key periods in 2022, before and after the release of iPhone 14. The total number of posts is a very obvious sign. Changes in this number can easily explain the changes in community activity before and after the release of iPhone 14.</p>
+    
+    <p>The table below shows the total number of posts before and after the release of iPhone 14:</p>
+    
+  <table class="dataframe table table-sm table-striped">
+    <tr>
+        <th>Time Period</th>
+        <th>Counts of Posts</th>
+    </tr>
+    <tr>
+        <td>March to June</td>
+        <td>3313</td>
+    </tr>
+    <tr>
+        <td>August to December</td>
+        <td>10302</td>
+    </tr>
+  </table>
+    <p>The number of posts increased significantly from 3,313 between March and June to 10,302 between August and December, indicating a significant surge in community engagement following the iPhone 14 launch. This sharp rise may be attributed to the increased discussion and interest generated by the new release. Showing that product launches play a key role in driving user activity within the iPhone subreddit.</p>
+
+    <p>After studying the insights brought by the total number of posts published, we can deeply explore the distribution of post scores and the number of comments to see what patterns exist in posts published during the two windows before and after the release of iPhone 14, that is their score and review count distribution.</p>
+
+      <iframe src="../website/eda2_1.html" width="800" height="600"></iframe>
+      <p>This scatter plot is the distribution of scores and number of comments for all posts published in the iPhone community from March to July 2022. The abscissa is the score, the ordinate is the number of comments.</p>
+
+    <p>According to the observation on the scatter plot, the scores and number of comments of most posts are concentrated within 250 scores and 200 number of comments, and the origin has the most clustered points, which means that most posts do not score high and have fewer comments.</p>
+
+    <p>In addition, the distribution of post scores and number of comments shows a positive correlation trend, indicating that the two complement each other and achieve each other. That is, posts with higher post scores generally attract more comments, and vice versa.</p>
+
+    <p>There are very few outliers: for example, posts with very high scores but few comments, and posts with averages close to 400 but very low scores. For such abnormal posts, further analysis is needed to determine the reasons for their anomalies.</p>
+
+      <iframe src="../website/eda2_2.html" width="800" height="600"></iframe>
+      <p>This scatter plot is the distribution of scores and number of comments for all posts published in the iPhone community from August to December 2022. The abscissa is the score, the ordinate is the number of comments.</p>
   
-          </p>
-          <p>
-            <strong>Mid-Morning to Early Afternoon (10 am to 2 pm):</strong> There is a noticeable lighter coloration, although not as light as the early morning hours. This suggests moderate activity which might be because users are engaged in their daily work or school activities during these times.
-          </p>
-          <p>
-            We can see that from 3 pm to 10 pm every day, the color block is the darkest, indicating that user activity is the highest during this time period.
-          </p>
-          <p>
-            The data is concentrated from 3pm to 10pm from Monday to Friday. Surprisingly, user activity on weekends is not as good as on weekdays. This could indicate that the users are likely engaged in discussions or viewing content on the subreddit after typical work or school hours.
-          </p>
-          <p>
-            Weekends show a different pattern with slightly less intensity in color, indicating that the user activity is somewhat reduced compared to weekdays. Maybe people prefer to relax on weekends.
-          </p>
-          <p>
-            But in addition to time habits affecting user activity, there may also be the possibility of external factors, such as product release cycles, holidays, or major events.
-          </p>
-          <p>
-            For Reddit, activity patterns of user activity in the "iPhone" subreddit, get valuable insights into the day-to-day rhythms of the platform, which can help optimize content delivery and moderation schedules.
-          </p>
-          <p>
-            <strong>Example: </strong>
-          </p>
-          <p>
-            <strong>Improvement of the timetable: </strong>From 3 points in the morning to 10 points in the morning of the highest working day, it is possible to avoid important announcements, place books or official activities, and provide the highest level of visibility and participation.
-          </p>
-          <p>
-            <strong>Content management: </strong>During the peak period of active activity, it is possible to organize the content in advance, so that the Reddit sub-version remains high-quality and quantitative.
-          </p>
-          <p>
-            <strong>Periodic check: </strong>Under low flow conditions (for example, during the morning hours), the subreddit can be checked or updated, and at the same time, the maximum amount of ground can be reduced.
-  
-          </p>
-          <p>
-            <strong>Advice and promotion: </strong>As a result, Reddit child version will promote the promotion, it can be avoided at the highest level, and the maximum amount of investment can be recovered.
-  
-          </p>
-          <p>
-            <strong>Resource distribution: </strong>Distribution of human resource resources or accounting resources from the source of management and the ever-increasing amount of reciprocity.
-          </p>
-  </section>
-  <section id="EDA-3" class="level2">
-    <h2 class="anchored" data-anchor-id="EDA-3">EDA 3</h2>
-          <img src="../data/plots/iPhone_version_comment_pie.png" alt="Image 1">
-          <img src="../data/plots/iPhone_version_submission_pie.png" alt="Image 2">
-          <p>
-            At the time of our data analysis, the latest iPhone version was the iPhone 15. Based on our findings, we speculate that there might be relatively lower enthusiasm or discussion around purchasing the iPhone 15 at present. This could be due to individuals still being in an observation phase or not being sufficiently familiar with this new product (as it was only announced in September 2023). It's also possible that people are waiting for year-end Black Friday or Christmas discounts before considering purchasing the iPhone 15. Moreover, Reddit users might be gradually decreasing, resulting in a lack of updates on the latest trends. Therefore, based on these considerations, the discussion volume regarding the iPhone 15 might be relatively low.
-          </p>
-          <p>
-            Furthermore, at the current point in time, the total discussion count for iPhone versions in the submission dataset is less than that in the comment dataset, which aligns with our expectations (generally, a topic has multiple comments). Additionally, according to the pie charts, we observed that although the discussion count for the iPhone 14 is the highest in the submission dataset, followed by the iPhone 13, in the comment dataset, the discussion around the iPhone 14 is significantly lower compared to the iPhone 13 and even less than the iPhone 11. This suggests that there might be more hesitancy around whether to purchase the iPhone 14. Users might still perceive the iPhone 13 to offer better value for money compared to the iPhone 14, hence the higher discussion in the submission dataset but lower discussion in the comment dataset. Of course, it's also possible that the opposite is true: the iPhone 13 could be performing exceptionally poorly, leading to a very high level of negative discussions. Surprisingly, the iPhone 11 still maintains substantial discussion volume in both the submission and comment datasets.
-          </p>
-          <p>
-            Overall, at this current point (with the iPhone 15 being the latest version, encompassing our entire dataset's time frame), iPhone versions 11 to 14 continue to maintain significant discussion levels. This may imply that these iPhone versions might be more favored among Reddit users. In contrast, the overall discussion volume for iPhone versions 8 to 10 remains low in both datasets.
-          </p>
-  </section>
+      <p>According to the observation on the scatter chart, after the release of iPhone 14, the scores and number of comments of most posts are concentrated within 500 scores and 500 comments. Comparing the distribution chart of post scores and number of comments before the release of iPhone 14, it can be seen that the average number of posts The popularity has been significantly increased, which shows that the release of the new product iPhone14 has driven the activity of the community.</p>
+      
+      <p>
+        When studying the word cloud composition before and after the release of iPhone 14, we can quickly discover the most popular topics and trends in the iPhone subsection.
+      </p>
+      <img src="../data/plots/word_cloud_1.png" alt="Image 3" style="max-width: 100%;">
+        <p>
+          This is a word cloud generated based on the title of the post before iPhone 14 was released.
+        </p>
+        <p>
+          Highlighted words such as "battery", "issue", "photo", "data", "storage" and "camera" indicate that battery life, system issues, photo management, data security, storage space and camera quality are user concerns. There are no particularly prominent words about new product launches, indicating that user discussions have stabilized five months after the release of iPhone 13.
+        </p>
+      <img src="../data/plots/word_cloud_2.png" alt="Image 3" style="max-width: 100%;">
+        <p>This is the word cloud generated based on the title of the post after iPhone14 was released.</p>
+        <p>During this period, the fonts such as "Pro", "Max", and "new" became larger, indicating the release of the iPhone 14 series and the increase in related discussions. The prominence of words such as "video", "wallpaper", "iMessage", and "charging" may indicate discussions of new features or problems users are encountering on new devices.</p>
+        <p>From the word cloud, we can find the most popular topics and trends in the "iPhone" subreddit, such as paying attention to battery life issues; storage management, choosing the mobile phone memory that best suits you; discussions about cameras, which can make users want to take pictures, and get good suggestions; in view of the frequent occurrence of words such as "issue" and "problem", users are advised to pay attention to check it to provide more useful purchasing suggestions.</p>
+        <p>Overall, these two word clouds provide a macro perspective, showing the core topics that users care about. For users, they can quickly obtain the focus of the iPhone community on new products based on the composition of the word cloud, quickly read and obtain useful information, and help provide purchasing suggestions. For community managers and content creators, understanding these trends can help develop a content strategy that is more aligned with user needs. For product development teams, user discussion points can serve as feedback to improve existing products or guide the development of future products.</p>
+
+</section>
+<section id="EDA-3" class="level2">
+    <h2 class="anchored" data-anchor-id="EDA-3">Reddit Impact Analysis (EDA 3)</h2>
+    <p><strong>A Reminder for Our Business Goal:</strong> We aim to analyze the influence itself. Our primary goal in the Exploratory Data Analysis tasks is to understand and identify elements that hold significant influence or attract widespread attention across different communities. However, the question of what behaviors or outcomes can be deemed as having substantial impact remains to be explored. This is the topic we are about to delve into.</p>
+    <p><strong>Analysis:</strong>  
+    <iframe src="../website/eda3_scatter_plot_1.html" width="800" height="600"></iframe>
+      <p>
+        The above figure explores whether a post becomes instantly popular. We sorted the posts based on the number of comments and score. In cases where both the number of comments and score are higher, a shorter time_difference indicates a higher likelihood of the post becoming instantly popular. In other words, if a post receives a significant number of comments and scores in a short period, it may indicate that it has become instantly popular. Therefore, in our scatterplot results, a higher position, larger size, and a color closer to blue for the dots indicate that the post is more likely to become popular in the short term, exerting a significant influence in a brief period.
+      </p>
+      <iframe src="../website/eda3_scatter_plot_2.html" width="800" height="600"></iframe>
+      <p>
+        The above figure explores whether a post has persistent influence. We sorted the posts based on the time_difference. In cases where the time_difference is longer, a higher number of comments indicates a higher level of the post's sustained influence. In other words, we explore whether a post has a longer-lasting impact by tracking the timestamps of comments. Similarly, in our scatterplot results, a higher position, larger size, and a color closer to blue for the dots indicate that the post has a more persistent influence.
+      </p>
+      <p>
+        We think that to explore influence, it is not only necessary to examine whether a post attracts significant attention in a short period (instant popularity) but also crucial to assess the sustained coverage of influence for the post. For example, based on the results of the two plots above, the post "Do you trust Apple with their views on privacy? or do you think its all fake?" not only attracted a significant amount of attention in a short period but also maintained high attention over an extended duration. In other words, this post has a substantial and lasting influence.
+      </p>
+      <p>
+
+      </p>
+
+</section>
 </section>
 
 
@@ -434,7 +633,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br>This analysis uses ChatGPT to assist in fixing grammar and selecting vocabulary.</a></div>   
     <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-14">View the source at GitHub</a></div>
   </div>
 </footer>

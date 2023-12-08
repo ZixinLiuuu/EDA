@@ -183,8 +183,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul>
 <li><a href="#introduction_to_the_project" id="introduction-to-the-project" class="nav-link" data-scroll-target="#data-information-and-introduction">Introduction to the Project</a></li>
-<li><a href="#project_goals_and_significance" id="project-goals-and-significance" class="nav-link" data-scroll-target="#data-cleaning">Goals and Significance</a></li>
-<li><a href="#why_we_do_this" id="why-we-do-this" class="nav-link" data-scroll-target="#dataset-overview">Why We Do This</a></li>
 <li><a href="#appendix1" id="appendix" class="nav-link" data-scroll-target="#dataset-overview">Appendix</a></li>
 </ul>
 
@@ -197,87 +195,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <section id="Exploratory Data Analysis" class="level1">
-<h1>The iPhone Chronicles: Data Stories from the Subreddit</h1>
+<h1>Research on the iPhone community on the Reddit platform</h1>
 
 
 <section id="introduction_to_the_project" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-the-project">Introduction to the Project</h2>
-<img src="../data/plots/r_iphone_1.jpg" alt="Image 1" style="max-width: 100%;">
-<figcaption>Image source: https://www.express.co.uk/life-style/science-technology/1666664/apple-iphone-14-review</figcaption>
-    <p>
-        Welcome to our exploration of the "iPhone" subreddit, where we embarked on a journey to unravel the dynamics of this vibrant online community. The "iPhone" subreddit serves as a digital hub where enthusiasts, users, and curious minds converge to share experiences, insights, and discussions about Apple's iconic smartphone.
-    </p>
-	<p>
-		Our project is driven by the curiosity to understand the heartbeat of this community—what engages its members, what topics ignite passionate conversations, and how the ebb and flow of user activity shape this virtual space.
-	</p>
-</section>
-<section id="project_goals_and_significance" class="level2">
-  <h2 class="anchored" data-anchor-id="project-goals-and-significance">Goals and Significance</h2>
-          <p>
-            Our overarching goal is to decode the nuanced interactions within the "iPhone" subreddit, providing valuable insights for both the community members and observers. We aim to identify key contributors, uncover popular discussion topics, analyze user sentiments, and enhance the overall user experience. By delving into patterns of user activity, sentiment analysis, and content relevance, we aspire to paint a comprehensive picture of the community dynamics. This endeavor is not just about numbers and data; it's about understanding the community's pulse, fostering meaningful discussions, and contributing to the enriched experience of "iPhone" enthusiasts.
 
-          </p>
-  </section>
-  <section id="why_we_do_this" class="level2">
-    <h2 class="anchored" data-anchor-id="why-we-do-this">Why We Do This</h2>
-    <img src="../data/plots/r_iphone.png" alt="Image 1" style="max-width: 100%;">
-    <figcaption>Image source: https://www.reddit.com/r/iphone/</figcaption>
-          <p>
-            The significance of this project lies in its potential to bridge the gap between data and community understanding. Unveiling the preferences, sentiments, and patterns within the "iPhone" subreddit not only aids community managers and content creators in tailoring their strategies but also provides community members with a deeper understanding of their collective interests. Beyond the numbers, this project strives to capture the essence of a digital community, where each post, comment, and interaction contributes to a vibrant tapestry of shared experiences.
-          </p>
-          
-  </section>
+<p>In the dynamic landscape of online communities, platforms like Reddit serve as thriving hubs where users engage in discussions, share insights, and influence opinions. We hope that through our analysis, we can better serve Reddit users by enabling them to access the most authentic and valuable information while using the platform.</p>
+<p>We plan to delve into the intricate dynamics of the Reddit community, with a particular focus on the Apple ecosystem and iPhone discussions. Given that revenue from iPhones contributes approximately 52% to Apple's total revenue, we are particularly intrigued by discussions about iPhones on Reddit. We also aim to provide strategic suggestions for Apple through our exploration and insights.</p>
+<p>Our overall analysis includes three key directions: Exploratory Data Analysis (EDA), Natural Language Processing (NLP), and Machine Learning Tasks (ML). These tasks are meant to explore how users interact, what content is popular, and how it affects both online discussions and real-world events.</p>
+<p>Through these efforts, we aspire to contribute valuable insights to both the Reddit community and Apple, fostering a deeper understanding of user sentiments and preferences within the context of iPhone-related discussions.</p>
+<p>Note. All times appearing in this project are UTC time</p>
+</section>
+
   <section id="appendix1" class="level2">
     <h2 class="anchored" data-anchor-id="appendix">Appendix: Goals and Technical Proposals</h2>
-    <h3>EDA 1</h3>
-    <p><strong>Business Goal:</strong> Analyze the top 10 most frequent posters in the “iPhone” subreddit. This analysis can help us understand the most active contributors within this specific subreddit, and could offer valuable insights. That is, these active posters may have a certain level of influence within the community, with their posts potentially attracting attention and responses from other users. This could be helpful in understanding the dynamics of the community and popular topics. Additionally, these posters likely cover various topics and discussions, so, by analyzing their posts, we could discover the most popular topics and trends within the “iPhone” subreddit. This helps in understanding user interest in iPhone products or related subjects. Therefore, we opted to examine the top 10 individuals who post most frequently within the "iPhone" subreddit (both in the submission and comment datasets).</p>
+    <h3>EDA 1: Research on user activity in iphone community</h3>
+    <p><strong>Business Goal:</strong>  Conducting user activity research in the iphone subreddit is critical to understanding community dynamics, especially how important product launches like the iPhone 14 impact user engagement. This research benefits community managers, marketers, and product developers by revealing user interaction patterns and identifying key influencers. These insights can effectively inform marketing strategies, product development and customer engagement approaches.</p>
 
-    <p><strong>Technical Proposal:</strong> We will determine the occurrence count in the 'author' column within both the submission and comment datasets to identify the top 10 most frequent posters. Subsequently, we will present the results in two graphs to illustrate the findings separately.</p>
+    <p><strong>Technical Proposal:</strong> First, limit the time range to March to November 2022, because iPhone 14 will be released in September 2022. Comparing the data from March to July 2022 with the data from August to December, you can Get patterns related to iPhone 14 launch. Then user activity is quantified as a score calculated by the formula (number of posts * 5 + number of comments). The analysis involves calculating the activity scores of users during these periods and identifying the top 15 most active contributors. This approach allows for an in-depth analysis of the distribution patterns of community contributors.</p>
 
-    <h3>EDA 2</h3>
-    <p><strong>Business Objective:</strong> Uncover activity patterns of user activity in the "iPhone" subreddit, provide valuable insights into the day-to-day rhythms of the platform, and help optimize content delivery and moderation schedules.</p>
+    <h3>EDA 2: Research on posts in iphone community </h3>
+    <p><strong>Business Objective:</strong> Conduct An in-depth exploration of popular posts on the iPhone Reddit subreddit, designed to provide users, forum moderators, and technology companies with effective recommendations so that they can better serve the interests and needs of the community, and potentially influence future product discussions. and development.</p>
     
-    <p><strong>Technical Proposal:</strong> Technical solution: Define the peak period as the top 5 posts within 24 hours, and the trough period as the bottom 5 posts within 24 hours. Then select a week. We will then extract the relevant timestamps from the submission dataset (using "created_utc"). These timestamps will be grouped by hour (so we have 24 groups), allowing us to calculate the frequency of user activity for each time period. Finally, make an activity distribution chart (the number of posts published in that hour) according to the day of the week.</p>
+    <p><strong>Technical Proposal:</strong> To assess the impact of the iPhone 14 launch, we've confined our analysis to two specific time periods, split between March and July 2022 and between August and December. Data collection covers all posts on the iPhone subreddit during these time intervals. This analysis includes evaluating the total volume of posts to determine trends in user activity over a specific period. It also involves exploring the distribution of post scores and number of comments and their interrelationships. Finally, the study examined post titles, utilizing word cloud visualization to highlight popular topics and trends within the “iPhone” community.</p>
 
-    <h3>EDA 3</h3>
-    <p><strong>Business Goal:</strong> Statistics on the occurrence frequency of different iPhone versions are discussed to determine which version has a higher level of discussion.</p>
+    <h3>EDA 3: Reddit Impact Analysis</h3>
+    <p><strong>Business Goal:</strong> We aim to analyze the influence itself. Our primary goal in the Exploratory Data Analysis tasks is to understand and identify elements that hold significant influence or attract widespread attention across different communities. However, the question of what behaviors or outcomes can be deemed as having substantial impact remains to be explored. This is the topic we are about to delve into.</p>
 
-    <p><strong>Technical Proposal:</strong> Read all Reddit posts, filter out those from the subreddit 'iphone,' use regular expressions to retrieve Reddit posts containing keywords related to iPhone versions, and then count the occurrences. Analyze the level of discussion for each iPhone version from the filtered posts.</p>
+    <p><strong>Technical Proposal:</strong> We think that influence can be expressed through the number of comments, score, and the duration of discussions. Therefore, we will analyze influence by tracking the number of comments and score for each submission, as well as the lifecycle of comments corresponding to each submission—meaning the duration of discussion for that submission (from the start of posting to the gradual decrease in discussion). These methods help in understanding which content experiences instant popularity and which has lasting influence. Consequently, we connect comments with their corresponding submissions based on the link_id in the comment dataset, creating a complete combination of submissions and all their associated comments. Using this, we obtain the number of comments and score for each submission. Subsequently, we identify the earliest and latest times of comments for each submission, calculating the time difference (considered as duration).
+    </p>
 
-    <h3>NLP 1</h3>
-    <p><strong>Business Goal:</strong> When users plan to post about the iPhone 14, the system will suggest potential questions based on historical data, enhancing user engagement and interaction. This approach is designed to enrich the user experience and stimulate user interest in posting.</p>
+    <h3>NLP 1: Analysis of Apple products released in 2022</h3>
+    <p><strong>Business Goal:</strong> Focusing on the products released by Apple in 2022, analyze the performance of different versions of iPhone products, and explore the different product focuses of different products that Reddit users are concerned about. The mission is to provide users with valuable insights to make informed purchasing decisions; and to provide strategic recommendations to Apple based on user discussions.</p>
 
-    <p><strong>Technical Proposal:</strong> First, posts related to "iphone14" are filtered out. Then, the data undergoes preprocessing. Afterward, Spark NLP and the T5 model are used to analyze these texts and generate questions. These questions are subsequently used as automatic prompts when posting, helping users quickly find popular topics, thereby enhancing community interaction and user experience.</p>
+    <p><strong>Technical Proposal:</strong> The time range is limited to the entire year of 2022 because we want to study Apple products released in 2022. In addition, we only used submission data, because we believe that there will be discussions only when posts are posted, so we can think that the posting situation reflects the discussion situation, so that we can observe the direction of the discussion. Then get the data of different models of products from the subreddit of different models of iPhone. Use nlp model to process selftext and delete unimportant words; then analyze the direction of discussion based on keywords.</p>
 
-    <h3>NLP 2</h3>
-    <p><strong>Business Goal:</strong> Delve into iPhone-related submitted posts to pinpoint the specific aspects that capture the greatest interest from the community, all while simplifying the identification of clear and comprehensible discussion topics for posts.</p>
+    <h3>NLP 2: Analyzing Apple Stock Fluctuations Around iPhone Releases </h3>
+    <p><strong>Business Goal:</strong> Analyze sentiment changes in iPhone discussions by users before and after September</p>
 
-    <p><strong>Technical Proposal:</strong> To achieve this, we will begin by filtering posts related to iPhones. Next, we will manually establish discussion topics specific to the iPhone and label relevant posts accordingly. Subsequently, we will leverage advanced models such as BERT, combined with TF-IDF analysis, to perform topic classification. This approach will allow us to categorize posts into topics and, through post counting, determine the top k most popular discussion topics surrounding iPhones.</p>
+    <p><strong>Technical Proposal:</strong> September 2022 saw an update for iOS. iOS 15 was released in September. We will build a pretrained sentiment model to detect changes in user sentiment regarding the iPhone in their comments before and after September. Through sentiment analysis of users, we can understand their attitudes toward this system version
+    </p>
 
-    <h3>NLP 3</h3>
-    <p><strong>Business Goal:</strong> Evaluate the sentiment of Reddit users concerning particular Apple product titles, helping understand public perception and sentiment towards Apple products.</p>
+    <h3>NLP 3: Identifying Ironic Comments or Posts</h3>
+    <p><strong>Business Goal:</strong> Developing the capability to recognize ironic instances within user comments enhances our understanding of subtle communication on the platform, enabling users to better navigate and comprehend community content.     </p>
 
-    <p><strong>Technical Proposal:</strong> We will utilize NLP techniques to analyze the content of the body of the essay. By employing sentiment analysis tools, we can classify comments into categories such as positive, negative, or neutral. This approach allows us to quantify the sentiment of the Reddit community regarding Apple product titles, providing a deeper understanding of how users perceive and discuss these products.</p>
+    <p><strong>Technical Proposal:</strong> We will use a pre-trained NLP model specifically designed for detecting sarcasm and irony within the comments. Subsequently, we will fine-tune and optimize the model using the expansive Reddit dataset. By applying these models, we can systematically identify and deeply study the frequency and context of sarcastic and ironic expressions in user interactions, ultimately shedding light on the complexities of language use on the platform.</p>
 
-    <h3>NLP 4</h3>
-    <p><strong>Business Goal:</strong> Develop the capability to identify instances of sarcasm and irony in user comments around “iPhone” subreddit, enhancing the understanding of nuanced communication on Reddit.</p>
+    <h3>NLP 4: iPhone Subreddit Topic Forecast</h3>
+    <p><strong>Business Goal:</strong> Use a language model to automatically generate questions from posts that may reflect the concerns of Reddit community users about Apple products released in 2022. By analyzing these issues, the product features and performance indicators that users are most interested in can be extracted, and it can also provide guidance for Apple to adjust the direction of product development in a timely manner.
+    </p>
 
-    <p><strong>Technical Proposal:</strong> We will use a pre-trained NLP model specifically designed for detecting sarcasm and irony within the comments. Subsequently, we will fine-tune and optimize the model using the expansive Reddit dataset. By applying these models, we can systematically identify and deeply study the frequency and context of sarcastic and ironic expressions in user interactions, ultimately shedding light on the complexities of
+    <p><strong>Technical Proposal:</strong> uses Python with Apache Spark and Spark NLP for text data processing, applies regular expressions for filtering specific patterns, utilizes UDFs for merging and cleaning text data, and incorporates a pre-trained T5 model for question generation from text.</p>
     
-    <h3>ML 1</h3>
-    <p><strong>Business Goal:</strong> Predicting Popularity of Posts in the iPhone Subsection. By analyzing various post features we intend to create a model capable of distinguishing between popular posts. This model will be a valuable tool for understanding the factors that contribute to a post's success and enhancing user experience within the iPhone community.    </p>
+    <h3>ML 1: Post Popularity Prediction</h3>
+    <p><strong>Business Goal:</strong> Predicting Popularity of Posts in the iPhone Subsection. By analyzing various post features we intend to create a model capable of distinguishing between popular posts. This model will be a valuable tool for understanding the factors that contribute to a post's success and enhancing user experience within the iPhone community.
+    </p>
 
-    <p><strong>Technical Proposal:</strong> Begin with Data Preprocessing, selecting posts from 2022 to 2023 for relevance to ensure the dataset's relevance and timeliness. In Target Variable Definition, a Decision Tree Regression model assigns weights to scores and comments, categorizing posts as "popular" or "not." Feature Extraction involves converting post attributes into vectors. Then, we prepare training and validation sets and explore models like Logistic Regression, Random Forest, and Gradient Boosting Trees. This is followed by Model Optimization and Validation. Finally, we use coefficients or feature importance scores to understand the impact of different factors on post popularity.
+    <p><strong>Technical Proposal:</strong> Begin with Data Preprocessing, selecting posts from 2022 to 2023 for relevance to ensure the dataset's relevance and timeliness. In Target Variable Definition, a Decision Tree Regression model assigns weights to scores and comments, categorizing posts as "popular" or "not." Feature Extraction involves converting post attributes into vectors. Then, we prepare training and validation sets and explore models like Logistic Regression, Random Forest, and Gradient Boosting Trees. This is followed by Model Optimization and Validation. Finally, we use coefficients or feature importance scores to understand the impact of different factors on post popularity.</p>
         
-    <h3>ML 2</h3>
-    <p><strong>Business Goal:</strong> Create an automated system to accurately classify if the content belongs to “iPhone” subreddit or not, improving content organization and user experience.</p>
+    <h3>ML 2: Top Comment Prediction Model</h3>
+    <p><strong>Business Goal:</strong> Determine whether a comment will be stickied.
+    </p>
     
-    <p><strong>Technical Proposal:</strong> We will collect a large dataset of posts, including the content of the post and their associated subreddit categories. We will then label posts from “iPhone” subreddit with “Yes” and label the others with “No”. This dataset will serve as the training data for our classification machine learning model, designed for the purpose of predicting the most suitable subreddit for a given post. This content classification may need NLP techniques to extract features for each post.
+    <p><strong>Technical Proposal:</strong> Retrieve all stickied comments. First, use an NLP model to extract valuable information from the posts, including their subreddit (top 5), sentiment, and other relevant features. Then, train a machine learning model using the processed content along with the score and controversiality. Use the model to predict whether a comment will be stickied.</p>
     
-    <h3>ML 3</h3>
-    <p><strong>Business Goal:</strong> Determine whether a comment will be stickied.</p>
+    <h3>ML 3: Smart Automatic Classification System</h3>
+    <p><strong>Business Goal:</strong> Identify the most relevant subreddit for a Reddit post.
+    </p>
         
-    <p><strong>Technical Proposal:</strong> Retrieve all stickied comments. First, use an NLP model to extract valuable information from the posts, including their topic, sentiment, and other relevant features. Then, train a machine learning model using the processed content along with the score and controversiality. Use the model to predict whether a comment will be stickied.
+    <p><strong>Technical Proposal:</strong> Correctly labeling posts with appropriate tags brings convenience to users, while mismatched content and tags can cause confusion. We intend to build an ML classification model to suggest the most suitable subreddit for Reddit posts submitted by users. Our plan is to collect data from the top 5 subreddits with the highest post counts and use this information to train our model. This way, we can determine which of these five subreddits a user's post is most likely to belong to.
+    </p>
+
+
 
 
     
@@ -425,7 +415,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br> All content licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)</a></div>   
+    <div class="nav-footer-left">Content 2023 by [Project Team 14] <br>This analysis uses ChatGPT to assist in fixing grammar and selecting vocabulary.</a></div>   
     <div class="nav-footer-right">Made with and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/gu-dsan6000/fall-2023-reddit-project-team-14">View the source at GitHub</a></div>
   </div>
 </footer>
